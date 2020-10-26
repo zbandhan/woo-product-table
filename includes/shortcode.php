@@ -878,7 +878,32 @@ if( !function_exists( 'wpt_table_row_generator' ) ){
          * Adding Filter for Args inside Row Generator
          */
         $args = apply_filters( 'wpto_table_query_args_in_row', $args, $table_ID, false, $column_settings, false, false );
+        // Get only variable products
+        $variation_products_data = array_map('wc_get_product', get_posts(['post_type'=>'product_variation','nopaging'=>true])); 
+        $variation_array = [];
+        foreach ($variation_products_data as $vpd){
+            $variation_array[$vpd->get_parent_id()] = $vpd->get_parent_id();
+        }
 
+        // Get only simple products 
+        $simple_products_data = array_map('wc_get_product', get_posts(['post_type'=>'product','exclude'=> $variation_array, 'nopaging'=>true])); 
+        $simple_array = [];
+        foreach ($simple_products_data as $spd){
+            $simple_array[] = $spd->get_id();
+        }
+        
+        // Add filtered product ids to query args
+        foreach ($simple_array as $item){
+            $args['post__in'][$item] = $item;
+        }
+        wp_reset_query();
+        wp_reset_postdata();
+        // sort products
+
+        ksort($args['post__in']);
+        unset($args['tax_query']);
+        var_dump($args);
+        
         $product_loop = new WP_Query($args);
         $product_loop = apply_filters( 'wpto_product_loop', $product_loop, $table_ID, $args );
         /**
