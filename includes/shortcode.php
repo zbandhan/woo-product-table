@@ -896,13 +896,13 @@ if( !function_exists( 'wpt_table_row_generator' ) ){
         foreach ($simple_array as $item){
             $args['post__in'][$item] = $item;
         }
-        wp_reset_query();
-        wp_reset_postdata();
+//        wp_reset_query();
+//        wp_reset_postdata();
         // sort products
 
         ksort($args['post__in']);
-        unset($args['tax_query']);
-        var_dump($args);
+//      unset($args['tax_query']);
+//        var_dump($args);
         
         $product_loop = new WP_Query($args);
         $product_loop = apply_filters( 'wpto_product_loop', $product_loop, $table_ID, $args );
