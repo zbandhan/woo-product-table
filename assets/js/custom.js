@@ -2515,5 +2515,104 @@
             $(this).append('<input type="hidden" class="input-text qty text" value="' + qty + '">');
         });
         
+        //For Isaac Cabrera Task
+        // https://app.asana.com/0/1200602135381495/1200831024429478/f
+        let selectedTableID = 1234;
+        let limitCount = 1;
+        
+        $(document).on('wpt_count_updated',function(obj, args){
+            //console.log("HHHHHHHHHHHHHHHH");
+            //console.log(args);
+        });
+        /**
+         * 
+{
+            tableWise: {
+                tableID: 1234,
+                limit: 2,
+            },
+            productWise: {
+                [
+                    {
+                        products: [15,25,45],
+                    limit: 2,
+                    }
+                ]
+            }
+        }
+         * @type type
+         */
+        
+var hotels = [
+                     {name: "hilton hotel" },
+                     {name: "newton hotel"}
+                 ];
+                 console.log(hotels);
+                 
+        let cartConds = {
+            tableWise: [
+                    {
+                        id: 1234,
+                        limit: 2,
+                    },
+                    {
+                        id: 1235,
+                        limit: 2,
+                    },
+
+            ],
+            
+            productWise: [
+                    {
+                        ids: [13,14,5,15],
+                        limit: 2,
+                    },
+                    {
+                        ids: [33,44,55,666],
+                        limit: 2,
+                    },
+
+            ],
+            tableWiseLimitMessage: "Sorry, you unable to add product for this table",
+            ProductWiseLimitMessage: "Sorry, you unable to add product for this Group",
+        };
+        console.clear();
+        
+        $(document).on('click','input.enabled.wpt_tabel_checkbox.wpt_td_checkbox',function(event){
+            console.clear();
+            let selector = 'input.enabled.wpt_tabel_checkbox.wpt_td_checkbox';
+            let selectorObj = $(selector);
+            let checkedBox = selectorObj.closest('table').find('tr.wpt_row input.wpt_td_checkbox:checked');
+            let checkedBoxCount = checkedBox.length;
+            console.log(checkedBoxCount);
+            if(checkedBoxCount > 2){
+                
+                //$(this).prop('checked',false);
+                alert("Sorry, u anable to selected more");
+                return false;
+            }
+            
+//            if($(this).is(':disabled')){
+//                console.log("HHHHHH");
+//                alert("You unable to selected it.");
+//                return false;
+//            }
+//            
+//            if ($( this ).prop( "checked" )) {
+//                selectorObj.attr('disabled',true);
+//                $(this).removeAttr('disabled');
+//                return;
+//            }else{
+//                selectorObj.removeAttr('disabled');
+//                return;
+//            }
+//            console.log("DDDDDD");
+//            selectorObj.attr('disabled',true);
+//            
+//            $(this).removeAttr('disabled');
+//            return true;
+        });
+        
+        
     });
 })(jQuery);
