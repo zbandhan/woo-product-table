@@ -2543,16 +2543,13 @@
          * @type type
          */
         
-var hotels = [
-                     {name: "hilton hotel" },
-                     {name: "newton hotel"}
-                 ];
-                 console.log(hotels);
-                 
+
+        //console.clear();
+        
         let cartConds = {
             tableWise: [
                     {
-                        id: 1234,
+                        id: 12345,
                         limit: 2,
                     },
                     {
@@ -2564,55 +2561,81 @@ var hotels = [
             
             productWise: [
                     {
-                        ids: [13,14,5,15],
+                        ids: [17,34,18,19],
                         limit: 2,
                     },
                     {
-                        ids: [33,44,55,666],
+                        ids: [1077,14,264,15],
                         limit: 2,
                     },
 
             ],
-            tableWiseLimitMessage: "Sorry, you unable to add product for this table",
-            ProductWiseLimitMessage: "Sorry, you unable to add product for this Group",
+            tableWiseLimitMessage: "Sorry, There is a limit over {limit} Products for this table",
+            ProductWiseLimitMessage: "Sorry, There is a limit over {limit} Products for this Group",
         };
-        console.clear();
-        
-        $(document).on('click','input.enabled.wpt_tabel_checkbox.wpt_td_checkbox',function(event){
-            console.clear();
-            let selector = 'input.enabled.wpt_tabel_checkbox.wpt_td_checkbox';
-            let selectorObj = $(selector);
-            let checkedBox = selectorObj.closest('table').find('tr.wpt_row input.wpt_td_checkbox:checked');
-            let checkedBoxCount = checkedBox.length;
-            console.log(checkedBoxCount);
-            if(checkedBoxCount > 2){
+
+        /**
+         * For Table Wise condition.
+         * 
+         * In this if statement block, We did
+         * for table wise condition
+         * and also added a class on main wrapper div
+         * as well as added also a attribute 
+         * data-limit-on=tableWise
+         * 
+         * @since 1.0.0
+         * @author Saiful Islam<codersaiful@gmail.com>
+         * @see CodeAstrology https://codeastrology.com
+         */
+        if( cartConds.hasOwnProperty('tableWise') ){
+            let table_id,limit,message;
+            message = cartConds.tableWiseLimitMessage;
+            $.each(cartConds.tableWise,function(index,args){
+                table_id = args.id;
+                limit = args.limit;
+                message = message.replace('{limit}', limit);
                 
-                //$(this).prop('checked',false);
-                alert("Sorry, u anable to selected more");
-                return false;
-            }
-            
-//            if($(this).is(':disabled')){
-//                console.log("HHHHHH");
-//                alert("You unable to selected it.");
-//                return false;
-//            }
-//            
-//            if ($( this ).prop( "checked" )) {
-//                selectorObj.attr('disabled',true);
-//                $(this).removeAttr('disabled');
-//                return;
-//            }else{
-//                selectorObj.removeAttr('disabled');
-//                return;
-//            }
-//            console.log("DDDDDD");
-//            selectorObj.attr('disabled',true);
-//            
-//            $(this).removeAttr('disabled');
-//            return true;
-        });
+                /**
+                 * Adding a class to main div wrapper
+                 * when it will match for TableWise.
+                 * AND
+                 * add attribute on this main wrapper div
+                 * data-limit-on= 'tableWise'
+                 * 
+                 * @since 1.0.0
+                 */
+                $('#table_id_' + table_id).addClass('tableWise').attr('data-limit-on', 'tableWise');
+                
+                //We find selector based on tableid, so that it will work only for single table.
+                let selector = '#table_id_' + table_id + '.tableWise table.wpt_product_table input.enabled.wpt_tabel_checkbox.wpt_td_checkbox';
+                $(document).on('click',selector,function(){
+
+                    let selectorObj = $(selector);
+                    let checkedBox = selectorObj.closest('table').find('tr.wpt_row input.wpt_td_checkbox:checked');
+                    let checkedBoxCount = checkedBox.length;
+
+                    if( checkedBoxCount > limit){
+                        alert(message);
+                        return false;
+                    }
+                });
+
+            });
+        }
         
+        if( cartConds.hasOwnProperty('productWise') ){
+            let product_ids,limit,message;
+            message = cartConds.ProductWiseLimitMessage;
+            $.each(cartConds.productWise,function(index,args){
+                product_ids = args.ids;
+                limit = args.limit;
+                message = message.replace('{limit}', limit);
+                
+                console.log(index,product_ids,limit);
+                
+            });
+        }
         
+
     });
 })(jQuery);
