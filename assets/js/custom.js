@@ -2546,103 +2546,103 @@
         };
         
 
-        let cartConds;
-        if(config_json.hasOwnProperty('c-grouping')){
-            cartConds = config_json['c-grouping'];
-        }else{
-            cartConds = {};
-        }
+        // let cartConds;
+        // if(config_json.hasOwnProperty('c-grouping')){
+        //     cartConds = config_json['c-grouping'];
+        // }else{
+        //     cartConds = {};
+        // }
         
         
-        /**
-         * For Table Wise condition.
-         * 
-         * In this if statement block, We did
-         * for table wise condition
-         * and also added a class on main wrapper div
-         * as well as added also a attribute 
-         * data-limit-on=tableWise
-         * 
-         * @since 1.0.0
-         * @author Saiful Islam<codersaiful@gmail.com>
-         * @see CodeAstrology https://codeastrology.com
-         */
-        if( cartConds.hasOwnProperty('tableWise') ){
-            let table_id,limit,message;
-            message = cartConds.tableWiseLimitMessage;
-            $.each(cartConds.tableWise,function(index,args){
-                table_id = args.id;
-                limit = args.limit;
-                message = message.replace('{limit}', limit);
+        // /**
+        //  * For Table Wise condition.
+        //  * 
+        //  * In this if statement block, We did
+        //  * for table wise condition
+        //  * and also added a class on main wrapper div
+        //  * as well as added also a attribute 
+        //  * data-limit-on=tableWise
+        //  * 
+        //  * @since 1.0.0
+        //  * @author Saiful Islam<codersaiful@gmail.com>
+        //  * @see CodeAstrology https://codeastrology.com
+        //  */
+        // if( cartConds.hasOwnProperty('tableWise') ){
+        //     let table_id,limit,message;
+        //     message = cartConds.tableWiseLimitMessage;
+        //     $.each(cartConds.tableWise,function(index,args){
+        //         table_id = args.id;
+        //         limit = args.limit;
+        //         message = message.replace('{limit}', limit);
                 
-                /**
-                 * Adding a class to main div wrapper
-                 * when it will match for TableWise.
-                 * AND
-                 * add attribute on this main wrapper div
-                 * data-limit-on= 'tableWise'
-                 * 
-                 * @since 1.0.0
-                 */
-                $('#table_id_' + table_id).addClass('tableWise').attr('data-limit-on', 'tableWise');
+        //         /**
+        //          * Adding a class to main div wrapper
+        //          * when it will match for TableWise.
+        //          * AND
+        //          * add attribute on this main wrapper div
+        //          * data-limit-on= 'tableWise'
+        //          * 
+        //          * @since 1.0.0
+        //          */
+        //         $('#table_id_' + table_id).addClass('tableWise').attr('data-limit-on', 'tableWise');
                 
-                //We find selector based on tableid, so that it will work only for single table.
-                let selector = '#table_id_' + table_id + '.tableWise table.wpt_product_table input.enabled.wpt_tabel_checkbox.wpt_td_checkbox';
-                $(document).on('click',selector,function(){
+        //         //We find selector based on tableid, so that it will work only for single table.
+        //         let selector = '#table_id_' + table_id + '.tableWise table.wpt_product_table input.enabled.wpt_tabel_checkbox.wpt_td_checkbox';
+        //         $(document).on('click',selector,function(){
 
-                    let selectorObj = $(selector);
-                    let checkedBox = selectorObj.closest('table').find('tr.wpt_row input.wpt_td_checkbox:checked');
-                    let checkedBoxCount = checkedBox.length;
+        //             let selectorObj = $(selector);
+        //             let checkedBox = selectorObj.closest('table').find('tr.wpt_row input.wpt_td_checkbox:checked');
+        //             let checkedBoxCount = checkedBox.length;
 
-                    if( checkedBoxCount > limit){
-                        alert(message);
-                        return false;
-                    }
-                });
+        //             if( checkedBoxCount > limit){
+        //                 alert(message);
+        //                 return false;
+        //             }
+        //         });
 
-            });
-        }
+        //     });
+        // }
         
-        if( cartConds.hasOwnProperty('productWise') ){
+        // if( cartConds.hasOwnProperty('productWise') ){
             
             
-            $.each(cartConds.productWise,function(index,args){
-                let product_ids,product_id,limit,message,each_selector_row;
+        //     $.each(cartConds.productWise,function(index,args){
+        //         let product_ids,product_id,limit,message,each_selector_row;
                 
-                product_ids = args.ids;
+        //         product_ids = args.ids;
 
-                each_selector_row = 'productWise-group-'+ index;
-                $.each(product_ids,function(i_index, i_arg){
-                    product_id = i_arg;
-                    $('#product_id_' + product_id)
-                            .addClass('productWise')
-                            .addClass(each_selector_row) //A new class generating here
-                            .attr('data-pr-group-index', index);
-                });
+        //         each_selector_row = 'productWise-group-'+ index;
+        //         $.each(product_ids,function(i_index, i_arg){
+        //             product_id = i_arg;
+        //             $('#product_id_' + product_id)
+        //                     .addClass('productWise')
+        //                     .addClass(each_selector_row) //A new class generating here
+        //                     .attr('data-pr-group-index', index);
+        //         });
 
-                each_selector_row = '.' + each_selector_row; //Assign . at the begining as a class of html markup
-                //console.log($(each_selector_row + ' input.enabled.wpt_tabel_checkbox.wpt_td_checkbox').length);
-                let each_row_input_selector = each_selector_row + ' input.enabled.wpt_tabel_checkbox.wpt_td_checkbox';
-                let each_row_input_selector_checked = each_selector_row + ' input.enabled.wpt_tabel_checkbox.wpt_td_checkbox:checked';
+        //         each_selector_row = '.' + each_selector_row; //Assign . at the begining as a class of html markup
+        //         //console.log($(each_selector_row + ' input.enabled.wpt_tabel_checkbox.wpt_td_checkbox').length);
+        //         let each_row_input_selector = each_selector_row + ' input.enabled.wpt_tabel_checkbox.wpt_td_checkbox';
+        //         let each_row_input_selector_checked = each_selector_row + ' input.enabled.wpt_tabel_checkbox.wpt_td_checkbox:checked';
                 
                 
-                $('body').on('click', each_row_input_selector,function(){
+        //         $('body').on('click', each_row_input_selector,function(){
                     
-                    limit = args.limit;
-                    message = cartConds.ProductWiseLimitMessage;
-                    message = message.replace('{limit}', limit);
+        //             limit = args.limit;
+        //             message = cartConds.ProductWiseLimitMessage;
+        //             message = message.replace('{limit}', limit);
                     
-                    let checkedBox = $(each_row_input_selector_checked);
-                    let checkedBoxCount = checkedBox.length;
+        //             let checkedBox = $(each_row_input_selector_checked);
+        //             let checkedBoxCount = checkedBox.length;
                     
-                    if( checkedBoxCount > limit){
-                        alert(message);
-                        return false;
-                    }
+        //             if( checkedBoxCount > limit){
+        //                 alert(message);
+        //                 return false;
+        //             }
                     
-                });
-            });
-        }
+        //         });
+        //     });
+        // }
         
 
     });
