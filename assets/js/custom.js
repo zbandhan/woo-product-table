@@ -2544,15 +2544,15 @@
             tableWiseLimitMessage: "Sorry, There is a limit over {limit} Products for this table",
             ProductWiseLimitMessage: "Sorry, There is a limit over {limit} Products for this Group",
         };
-        console.log("HHHHHHHHHHHHHHConfig");
-        //console.log(config_json['c-grouping'],cartConds);
+        
+
         let cartConds;
         if(config_json.hasOwnProperty('c-grouping')){
             cartConds = config_json['c-grouping'];
         }else{
             cartConds = {};
         }
-        console.log(cartConds);
+        
         
         /**
          * For Table Wise condition.
