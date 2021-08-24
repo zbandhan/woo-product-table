@@ -2516,36 +2516,7 @@
         });
         
         //For Isaac Cabrera Task
-        // https://app.asana.com/0/1200602135381495/1200831024429478/f
-        let selectedTableID = 1234;
-        let limitCount = 1;
-        
-        $(document).on('wpt_count_updated',function(obj, args){
-            //console.log("HHHHHHHHHHHHHHHH");
-            //console.log(args);
-        });
-        /**
-         * 
-{
-            tableWise: {
-                tableID: 1234,
-                limit: 2,
-            },
-            productWise: {
-                [
-                    {
-                        products: [15,25,45],
-                    limit: 2,
-                    }
-                ]
-            }
-        }
-         * @type type
-         */
-        
 
-        //console.clear();
-        
         let cartConds = {
             tableWise: [
                     {
@@ -2562,11 +2533,11 @@
             productWise: [
                     {
                         ids: [17,34,18,19],
-                        limit: 2,
+                        limit: 1,
                     },
                     {
-                        ids: [1077,14,264,15],
-                        limit: 1,
+                        ids: [1077,14,264,15,21,22],
+                        limit: 2,
                     },
 
             ],
@@ -2624,15 +2595,43 @@
         }
         
         if( cartConds.hasOwnProperty('productWise') ){
-            let product_ids,limit,message;
-            message = cartConds.ProductWiseLimitMessage;
+            
+            
             $.each(cartConds.productWise,function(index,args){
+                let product_ids,product_id,limit,message,each_selector_row;
+                
                 product_ids = args.ids;
-                limit = args.limit;
-                message = message.replace('{limit}', limit);
+
+                each_selector_row = 'productWise-group-'+ index;
+                $.each(product_ids,function(i_index, i_arg){
+                    product_id = i_arg;
+                    $('#product_id_' + product_id)
+                            .addClass('productWise')
+                            .addClass(each_selector_row) //A new class generating here
+                            .attr('data-pr-group-index', index);
+                });
+
+                each_selector_row = '.' + each_selector_row; //Assign . at the begining as a class of html markup
+                //console.log($(each_selector_row + ' input.enabled.wpt_tabel_checkbox.wpt_td_checkbox').length);
+                let each_row_input_selector = each_selector_row + ' input.enabled.wpt_tabel_checkbox.wpt_td_checkbox';
+                let each_row_input_selector_checked = each_selector_row + ' input.enabled.wpt_tabel_checkbox.wpt_td_checkbox:checked';
                 
-                console.log(index,product_ids,limit);
                 
+                $('body').on('click', each_row_input_selector,function(){
+                    
+                    limit = args.limit;
+                    message = cartConds.ProductWiseLimitMessage;
+                    message = message.replace('{limit}', limit);
+                    
+                    let checkedBox = $(each_row_input_selector_checked);
+                    let checkedBoxCount = checkedBox.length;
+                    
+                    if( checkedBoxCount > limit){
+                        alert(message);
+                        return false;
+                    }
+                    
+                });
             });
         }
         
