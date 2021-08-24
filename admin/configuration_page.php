@@ -24,8 +24,9 @@ if( !function_exists( 'wpt_configuration_page' ) ){
             if( is_array( $_POST['data'] ) ){
                 $value = array_map(
                     function ($field){
+                
                         //All post value is santized here using array_map
-                        return sanitize_text_field( $field );
+                        return is_array( $field ) ? $field :sanitize_text_field( $field );
                     },$_POST['data']
                 );
             }
