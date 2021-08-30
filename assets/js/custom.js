@@ -622,8 +622,8 @@
          * On change Product Variation
          * Vairation Change
          */
-        $('body').on('change','.wpt_varition_section.variations select',function() {
-        //$('body').on('change','.wpt_varition_section',function() {
+        $('body').on('change','.wpt_varition_section.variations select,.wpt_action .variations select',function() {;
+//        $('body').on('change','.wpt_varition_section',function() {
             
             var product_id = $(this).closest('tr.wpt_row').data('product_id');
             var temp_number = $(this).closest('tr.wpt_row').data('temp_number');
@@ -723,7 +723,7 @@
             
 
             var quote_data = '';
-            $(this).find('select').each(function() {
+            $(this).each(function() { //.find('select')
                 var attribute_name = $(this).data('attribute_name');
                 var attribute_value = $(this).val();
                 current[attribute_name] = attribute_value;
@@ -737,6 +737,7 @@
             console.log(variations_data);
             var targetVariationIndex = 'not_found';
             var selectAllItem = true;
+            console.log("GGGGGGGGGGGGGGGG");
             try{
                 variations_data.forEach(function(attributesObject, objectNumber) {
                     
@@ -755,7 +756,7 @@
                             }
                             total_combinationable++;
                         });
-                        console.log(total_combinationable);
+
                         if(total_right_combination === total_combinationable){
                             targetVariationIndex = parseInt(objectNumber);
 
@@ -771,7 +772,6 @@
             }catch(e){
                 //e.getMessage();
             }
-            console.log("HHHHHHHHHHHHHHHHHH");
             console.log(targetVariationIndex);
             var wptMessageText = false;
             if (targetVariationIndex !== 'not_found') {
@@ -995,6 +995,8 @@
         
         $('.wpt_varition_section').each(function(){
             var current_value = $(this).children('select').val();
+            console.log("Curent Value");
+            console.log(current_value);
             if(current_value !== '0'){
                 $(this).trigger('change');
             }
