@@ -622,10 +622,11 @@
          * On change Product Variation
          * Vairation Change
          */
-        $('body').on('change','.wpt_varition_section',function() {
+        $('body').on('change','.wpt_varition_section.variations select',function() {
+        //$('body').on('change','.wpt_varition_section',function() {
             
-            var product_id = $(this).data('product_id');
-            var temp_number = $(this).data('temp_number');
+            var product_id = $(this).closest('tr.wpt_row').data('product_id');
+            var temp_number = $(this).closest('tr.wpt_row').data('temp_number');
             config_json = getConfig_json( temp_number ); //Added vat V5.0
             var target_class = '#product_id_' + product_id;
             
@@ -733,24 +734,28 @@
             if($.isEmptyObject(variations_data)){
                 targetRightCombinationMsg = config_json.right_combination_message_alt;//"Product variations is not set Properly. May be: price is not inputted. may be: Out of Stock.";
             }
-
+            console.log(variations_data);
             var targetVariationIndex = 'not_found';
             var selectAllItem = true;
             try{
                 variations_data.forEach(function(attributesObject, objectNumber) {
+                    
                     $.each(current,function(key,value){
                         if(value === "0"){
                             selectAllItem = false;
                         }
                     });
                     var total_right_combination=0, total_combinationable=0;
+                    
                     if(selectAllItem){
                         $.each(attributesObject.attributes,function(key,value){
+                            console.log(current[key],value);
                             if(value === "" || value === current[key]){
                                 total_right_combination++;
                             }
                             total_combinationable++;
                         });
+                        console.log(total_combinationable);
                         if(total_right_combination === total_combinationable){
                             targetVariationIndex = parseInt(objectNumber);
 
@@ -766,7 +771,8 @@
             }catch(e){
                 //e.getMessage();
             }
-            
+            console.log("HHHHHHHHHHHHHHHHHH");
+            console.log(targetVariationIndex);
             var wptMessageText = false;
             if (targetVariationIndex !== 'not_found') {
                 var targetAttributeObject = variations_data[targetVariationIndex];
