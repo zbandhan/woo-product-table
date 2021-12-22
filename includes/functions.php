@@ -547,7 +547,9 @@ function wpt_wp_dropdown_categories( $args = '', $get_taxonomy = false ) {
 	// Avoid clashes with the 'name' param of get_terms().
 	$get_terms_args = $parsed_args;
 	unset( $get_terms_args['name'] );
+    ///var_dump($get_terms_args);
 	$categories = get_terms( $get_terms_args );
+    //var_dump($categories);
 
         if( is_array( $get_taxonomy ) && ! empty( $get_taxonomy ) ){
             $categories = $get_taxonomy;

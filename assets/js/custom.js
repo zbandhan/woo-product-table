@@ -182,7 +182,7 @@
         $('table.wpt_product_table td select').trigger('change');
             //$.getScript(include_url + "/js/mediaelement/mediaelement-and-player.min.js");
             //$.getScript(include_url + "/js/mediaelement/mediaelement-migrate.min.js");
-            $.getScript(include_url + "/js/mediaelement/wp-mediaelement.min.js");
+            //$.getScript(include_url + "/js/mediaelement/wp-mediaelement.min.js");
             $.getScript(plugin_url + "/woocommerce/assets/js/frontend/add-to-cart-variation.min.js");
             $.getScript(plugin_url + "/woocommerce/assets/js/frontend/add-to-cart-variation.js");
         }
@@ -1448,7 +1448,7 @@
             }else{
                 targetTableArgs.args.meta_query = targetTableArgsBackup.args.meta_query;
             }
-
+            console.log("Loading Search");
             //Display Loading on before load
             targetTableBody.prepend("<div class='wpt_loader_text'>" + config_json.loading_more_text + "</div>"); //Laoding..
             $(document.body).trigger('wpt_query_progress',targetTableArgs);
