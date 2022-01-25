@@ -99,7 +99,7 @@
             var page_number = $(thisButton).data('page_number');
             
             var temp_number = $(thisButton).closest('.wpt_table_pagination').data('temp_number');
-            
+
             
             var targetTable = $('#table_id_' + temp_number + ' table#wpt_table');
             var targetTableArgs = targetTable.attr( 'data-data_json' );
@@ -1508,7 +1508,7 @@
                     $(document.body).trigger('wpt_query_done',targetTableArgs);
                 },
                 success: function(data) {
-                    
+                    //console.log(data);
                     $('.table_row_loader').remove();
                     
                     if( actionType === 'query' ){

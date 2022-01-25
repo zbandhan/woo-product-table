@@ -230,7 +230,20 @@ if( !function_exists( 'wpt_ajax_table_row_load' ) ){
         if(isset( $args['s'] ) && $args['s'] == 'false'){
             $args['s'] = false;
         }
-   
+        /**
+         * Advance search filter variation is enabled
+         *
+         * The work was done by Md Rakibul Islam
+         *
+         * @Since 8.0.1
+         * @author Md Rakibul Islam
+         */
+        $basics_tab = get_post_meta( $data['temp_number'], 'basics', true );
+        $product_type = isset( $basics_tab['product_type'] ) && !empty( $basics_tab['product_type'] ) ? $basics_tab['product_type'] : false;
+        if( $product_type ){
+            $args = wpt_get_agrs_for_variable( $args );
+        }
+
         $table_row_generator_array = array(
             'args'                      => $args,
             'wpt_table_column_keywords' => $table_column_keywords,
