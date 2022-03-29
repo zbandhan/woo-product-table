@@ -7,3 +7,5 @@ $wpt_single_price .= '</span>';
 //$wpt_single_price .= " </td>";
 //var_dump($product->get_price());
 echo wp_kses_post( $wpt_single_price );
+
+do_action('wpt_price_col_bottom', $table_ID, $settings, $column_settings, $config_value, $product);
