@@ -1696,6 +1696,9 @@ jQuery(function($) {
                 var thisRow = '#table_id_' + temp_number + ' tr.product_id_' + product_id;
                 $( thisRow + ' .message').val(msg);
         });
+        $('.wpt_row input.input-text.qty.text').each(function(){
+            $(this).trigger('change');
+        });
         $('body').on('change', '.wpt_row input.input-text.qty.text', function() {
                 var temp_number = $(this).parents('tr.wpt_row').data('temp_number');
                 var Qty_Val = $(this).val();
@@ -1753,7 +1756,7 @@ jQuery(function($) {
                 updateCheckBoxCount(temp_number);
             });
 
-        
+
         function updateCheckBoxCount(temp_number){
             config_json = getConfig_json( temp_number ); //Added vat V5.0
             var add_cart_text = $('#table_id_' + temp_number).data('add_to_cart');
