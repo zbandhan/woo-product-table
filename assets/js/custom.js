@@ -1696,9 +1696,12 @@ jQuery(function($) {
                 var thisRow = '#table_id_' + temp_number + ' tr.product_id_' + product_id;
                 $( thisRow + ' .message').val(msg);
         });
-        $('.wpt_row input.input-text.qty.text').each(function(){
-            $(this).trigger('change');
-        });
+        // setTimeout(function(){
+        //     $('.wpt_row input.input-text.qty.text').each(function(){
+        //         $(this).trigger('change');
+        //     });
+        // }, 1000);//wait 1 seconds
+
         $('body').on('change', '.wpt_row input.input-text.qty.text', function() {
                 var temp_number = $(this).parents('tr.wpt_row').data('temp_number');
                 var Qty_Val = $(this).val();

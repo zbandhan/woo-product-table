@@ -799,7 +799,9 @@ if( ! function_exists( 'wpt_table_row_generator' ) ){
                 $product_type = $product->get_type();
                 $parent_id = $product->get_parent_id(); // Version 2.7.7
                 
-                (Int) $id = $data['id'];     
+                (Int) $id = $data['id'];
+
+                wp( 'p=' . $id . '&post_type=product' );
 
                 $taxonomy_class = 'filter_row ';
                 $data_tax = false;
