@@ -801,6 +801,7 @@ if( ! function_exists( 'wpt_table_row_generator' ) ){
                 
                 (Int) $id = $data['id'];
 
+                // This code should be in latest branch
                 wp( 'p=' . $id . '&post_type=product' );
 
                 $taxonomy_class = 'filter_row ';
