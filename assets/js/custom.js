@@ -1696,7 +1696,14 @@ jQuery(function($) {
                 var thisRow = '#table_id_' + temp_number + ' tr.product_id_' + product_id;
                 $( thisRow + ' .message').val(msg);
         });
-        
+
+        $('tr.wpt_row .quick_qty .qty').each(function (){
+            var total_val = $(this).val();
+            total_val = parseInt(total_val);
+            if (total_val > 0){
+                $(this).hide();
+            }
+        });
         $('body').on('change', '.wpt_row input.input-text.qty.text', function() {
                 var temp_number = $(this).parents('tr.wpt_row').data('temp_number');
                 var Qty_Val = $(this).val();
