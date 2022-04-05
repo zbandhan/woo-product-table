@@ -1697,17 +1697,17 @@ jQuery(function($) {
                 $( thisRow + ' .message').val(msg);
         });
 
-        setTimeout(function(){
-            $('tr.wpt_row .quick_qty .qty').each(function (){
-                var total_val = $(this).attr('value');
-                total_val = parseInt(total_val);
-                console.log(total_val);
-
-                if (total_val > 0){
-                    //$(this).hide();
-                }
-            });
-        }, 2000);//wait 2 seconds
+        // setTimeout(function(){
+        //     $('tr.wpt_row .quick_qty .qty').each(function (){
+        //         var total_val = $(this).attr('value');
+        //         total_val = parseInt(total_val);
+        //         console.log(total_val);
+        //
+        //         if (total_val > 0){
+        //             //$(this).hide();
+        //         }
+        //     });
+        // }, 2000);//wait 2 seconds
 
         $('body').on('change', '.wpt_row input.input-text.qty.text', function() {
                 var temp_number = $(this).parents('tr.wpt_row').data('temp_number');
