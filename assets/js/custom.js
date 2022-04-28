@@ -1198,7 +1198,6 @@ jQuery(function($) {
                         if(min_quantity === '0' || typeof min_quantity === 'undefined'){
                             min_quantity = 1;
                         }
-                        //qtyElement.val(min_quantity);//Added at v4
                     });
                     uncheckAllCheck(temp_number);
                     
@@ -2390,8 +2389,6 @@ jQuery(function($) {
                     $( document ).trigger( 'wc_fragments_refreshed' );
                 },
                 success: function( response ) {
-                    console.log('HEEEEEEEEEEEEEEEEEEElloooooooooo');
-                    
                     setFragmentsRefresh( response );                    
                     WPT_MiniCart();
                     
@@ -2422,28 +2419,17 @@ jQuery(function($) {
                     }else{
                         currentAllSelectedButtonSelector.removeClass('disabled');
                         currentAllSelectedButtonSelector.removeClass('loading');
-                        tableWrapperTag.removeClass('loading-table');
+                        //tableWrapperTag.removeClass('loading-table');
                     }
                      
                     // //Added at v4.0.11
-                    // $('#table_id_' + temp_number + ' input.enabled.wpt_tabel_checkbox.wpt_td_checkbox:checked').each(function() {
-                    //     var product_id = $(this).data('product_id');
-                        
-                    //     var thisButton = $('tr.wpt_row_product_id_' + product_id + ' wpt_action a.button.wpt_woo_add_cart_button');
-                    //     thisButton.removeClass('disabled');
-                    //     thisButton.removeClass('loading');
-                    //     thisButton.addClass('added');
-                        
-                    //     var qtyElement,min_quantity;
-                    //     qtyElement = $('#table_id_' + temp_number + ' #product_id_' + product_id + ' input.input-text.qty.text');
-                    //     min_quantity = qtyElement.attr('min');
-                    //     if(min_quantity === '0' || typeof min_quantity === 'undefined'){
-                    //         min_quantity = 1;
-                    //     }
-                    //     //qtyElement.val(min_quantity);//Added at v4
-                    // });
-                    // uncheckAllCheck(temp_number);
-                    
+                    $('tr.wpt_row').each(function() {
+                        var product_id = $(this).data('product_id');
+                        var thisButton = $(this).find('.wpt_action button.button');
+                        thisButton.removeClass('disabled');
+                        thisButton.removeClass('loading');
+                        thisButton.addClass('added');
+                    });
                 },
                 error: function() {
                     alert('Failed');
