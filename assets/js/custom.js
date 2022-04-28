@@ -2377,7 +2377,7 @@ jQuery(function($) {
                 } 
             });
 
-            alert(5554);
+            
             $.ajax({
                 type: 'POST',
                 url: ajax_url,
@@ -2390,18 +2390,18 @@ jQuery(function($) {
                     $( document ).trigger( 'wc_fragments_refreshed' );
                 },
                 success: function( response ) {
-                    alert(success);
-                    $('div.primary-navigation').html(response);
-                    //setFragmentsRefresh( response );                    
-                    //WPT_MiniCart();
+                    console.log('HEEEEEEEEEEEEEEEEEEElloooooooooo');
                     
-                    //The following code was here, we have changed in if statement
-                    //$( document.body ).trigger( 'added_to_cart', [ response.fragments, response.cart_hash, $('added_to_cart') ] );
-                    if(WPT_DATA.add_to_cart_view){
-                        $( document.body ).trigger( 'added_to_cart', [ response.fragments, response.cart_hash, $('added_to_cart') ] );
-                    }else{
-                        $( document.body ).trigger( 'added_to_cart' ); //This will solved for fast added to cart but it will no show view cart link.
-                    }
+                    setFragmentsRefresh( response );                    
+                    WPT_MiniCart();
+                    
+                    // //The following code was here, we have changed in if statement
+                    // //$( document.body ).trigger( 'added_to_cart', [ response.fragments, response.cart_hash, $('added_to_cart') ] );
+                    // if(WPT_DATA.add_to_cart_view){
+                    //     $( document.body ).trigger( 'added_to_cart', [ response.fragments, response.cart_hash, $('added_to_cart') ] );
+                    // }else{
+                    //     $( document.body ).trigger( 'added_to_cart' ); //This will solved for fast added to cart but it will no show view cart link.
+                    // }
                     
                     $( document.body ).trigger( 'added_to_cart' ); //Trigger and sent added_to_cart event
                     $( document.body ).trigger( 'updated_cart_totals' );
@@ -2425,24 +2425,24 @@ jQuery(function($) {
                         tableWrapperTag.removeClass('loading-table');
                     }
                      
-                    //Added at v4.0.11
-                    $('#table_id_' + temp_number + ' input.enabled.wpt_tabel_checkbox.wpt_td_checkbox:checked').each(function() {
-                        var product_id = $(this).data('product_id');
+                    // //Added at v4.0.11
+                    // $('#table_id_' + temp_number + ' input.enabled.wpt_tabel_checkbox.wpt_td_checkbox:checked').each(function() {
+                    //     var product_id = $(this).data('product_id');
                         
-                        var thisButton = $('tr.wpt_row_product_id_' + product_id + ' wpt_action a.button.wpt_woo_add_cart_button');
-                        thisButton.removeClass('disabled');
-                        thisButton.removeClass('loading');
-                        thisButton.addClass('added');
+                    //     var thisButton = $('tr.wpt_row_product_id_' + product_id + ' wpt_action a.button.wpt_woo_add_cart_button');
+                    //     thisButton.removeClass('disabled');
+                    //     thisButton.removeClass('loading');
+                    //     thisButton.addClass('added');
                         
-                        var qtyElement,min_quantity;
-                        qtyElement = $('#table_id_' + temp_number + ' #product_id_' + product_id + ' input.input-text.qty.text');
-                        min_quantity = qtyElement.attr('min');
-                        if(min_quantity === '0' || typeof min_quantity === 'undefined'){
-                            min_quantity = 1;
-                        }
-                        //qtyElement.val(min_quantity);//Added at v4
-                    });
-                    uncheckAllCheck(temp_number);
+                    //     var qtyElement,min_quantity;
+                    //     qtyElement = $('#table_id_' + temp_number + ' #product_id_' + product_id + ' input.input-text.qty.text');
+                    //     min_quantity = qtyElement.attr('min');
+                    //     if(min_quantity === '0' || typeof min_quantity === 'undefined'){
+                    //         min_quantity = 1;
+                    //     }
+                    //     //qtyElement.val(min_quantity);//Added at v4
+                    // });
+                    // uncheckAllCheck(temp_number);
                     
                 },
                 error: function() {
