@@ -11,7 +11,8 @@
 
 $ID = $table_ID;
 $conditions = get_post_meta( $ID, 'conditions', true );
-$default_qty = $conditions['default_qty'];
+$default_qty = $conditions['default_qty'] ?? 1;
+$default_min_qty = $conditions['default_qty'] ?? 0;
 
 if( $product->is_sold_individually() ) return false;
 
@@ -19,6 +20,6 @@ if( $product->is_sold_individually() ) return false;
 woocommerce_quantity_input( array( 
     'input_value'   => apply_filters( 'woocommerce_quantity_input_min', $default_qty, $product ),
     'max_value'   => apply_filters( 'woocommerce_quantity_input_max', -1, $product ),
-    'min_value'   => apply_filters( 'woocommerce_quantity_input_min', 0, $product ),
+    'min_value'   => apply_filters( 'woocommerce_quantity_input_min', $default_min_qty, $product ),
     'step'        => apply_filters( 'woocommerce_quantity_input_step', 1, $product ),
 ) , $product, true );
