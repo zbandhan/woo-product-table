@@ -176,6 +176,19 @@ $access = wpt_user_can_edit();
         <table class="ultraaddons-table">
             <tr>
                 <th>
+                    <label class="wpt_label" for="wpt_default_qty"><?php esc_html_e( 'Default Qty', 'wpt_pro' ); ?></label>
+                </th>
+                <td>
+                    <input name="conditions[default_qty]" data-name='default_qty' value="<?php echo isset( $meta_conditions['default_qty'] ) ?$meta_conditions['default_qty'] : '1'; ?>" id="wpt_default_qty" class="wpt_fullwidth wpt_data_filed_atts ua_input" type="number" pattern="[0-9]*" placeholder="<?php esc_attr_e( 'Eg: 50 (for display 20 products', 'wpt_pro' ); ?>" value="20">
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <div class="wpt_column">
+        <table class="ultraaddons-table">
+            <tr>
+                <th>
                     <label class="wpt_label" for="wpt_table_table_type"><?php esc_html_e( 'Third Party Plugin Supporting ', 'wpt_pro' ); ?></label>
                 </th>
                 <td>
