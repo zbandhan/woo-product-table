@@ -2705,6 +2705,25 @@ jQuery(function($) {
              let qty = $(this).closest('tr').data('quantity');
             $(this).append('<input type="hidden" class="input-text qty text" value="' + qty + '">');
         });
+
+        $(document.body).on("click" , ".bari-add-to-cart-button" , function(){
+
+            let product_id = $(this).data("id");
+            let product_qty = 3;
+
+            $.ajax({
+                type: "POST",
+                url: ajax_url,
+                data: {
+                    action: "bari_add_to_cart",
+                    id: product_id,
+                    qty: product_qty
+                },
+                success: function(result){
+                    $(document.body).trigger('added_to_cart');
+                }
+            })
+        })
         
     });
 });
