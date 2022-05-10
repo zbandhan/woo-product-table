@@ -1,4 +1,17 @@
 <?php
+add_action('wp_ajax_ajax-on-button', 'saiful_custom_addtc');
+add_action('wp_ajax_noprev_ajax-on-button', 'saiful_custom_addtc');
+
+function saiful_custom_addtc(){
+
+    $product_id = $_POST['id'] ?? 0;
+    // var_dump();
+    WC()->cart->add_to_cart($product_id);
+
+    echo "Success";
+    wp_die();
+}
+
 if( ! function_exists( 'wpt_ajax_paginate_links_load' ) ){
     /**
      * Loading paginate lins for product table

@@ -81,3 +81,5 @@ if( $table_type == 'advance_table'){
             ), $product,false,false);
         }
 }
+?>
+<button class="saiful-test-button" data-id="<?php echo $id; ?>">Test Add</button>

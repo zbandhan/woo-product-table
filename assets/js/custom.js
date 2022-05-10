@@ -502,6 +502,33 @@ jQuery(function($) {
         });
         //***********************************/
         
+
+        $(document.body).on('click','.saiful-test-button',function(){
+            var thisButton = $(this);
+            let product_id = thisButton.data('id');
+            let qty = 5;// thisButton.data('id');
+
+            $.ajax({
+                type: 'POST',
+                url: ajax_url,
+                data:{
+                    action: 'ajax-on-button',
+                    id: product_id,
+                    qty: qty
+                },
+                complete:function(){},
+                success:function(result){
+                    $(document.body).trigger('added_to_cart');
+                    // alert(result);
+                    // $('.tables_cart_message_box.tables_cart_message_box_19431').html(result);
+                },
+                failed:function(){
+                    alert("Something went wrong");
+                }
+            });
+
+        });
+
         /**
          * Add to cart button Action 
          * for Ajax add to cart
