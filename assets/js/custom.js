@@ -2709,7 +2709,7 @@ jQuery(function($) {
         $(document.body).on("click" , ".bari-add-to-cart-button" , function(){
 
             let product_id = $(this).data("id");
-            let product_qty = 3;
+            let product_qty = $(this).data("qty");
 
             $.ajax({
                 type: "POST",

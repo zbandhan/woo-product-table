@@ -626,10 +626,13 @@ if( ! function_exists( 'wpt_order_meta_handler' ) ){
 add_action( 'woocommerce_new_order_item', 'wpt_order_meta_handler', 1, 3 );
 
 add_action( 'wp_ajax_bari_add_to_cart' , 'bari_add_to_cart' );
+
 function bari_add_to_cart(){
 
     $product_id = $_POST['id'] ?? 0;
-    WC()->cart->add_to_cart($product_id);
+    $quantity = $_POST['qty'] ?? 0;
+    WC()->cart->add_to_cart( $product_id , $quantity );
+    
     wp_die();
 
 }

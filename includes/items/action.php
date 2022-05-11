@@ -83,4 +83,4 @@ if( $table_type == 'advance_table'){
 }
 ?>
 
-<button class="bari-add-to-cart-button" data-id="<?php echo $product->get_id() ?>">New Button</button>
+<button class="bari-add-to-cart-button" data-id="<?php echo $id ?>" data-qty="<?php echo $default_quantity ?>">New Button</button>
