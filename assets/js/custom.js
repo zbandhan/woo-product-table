@@ -2710,7 +2710,8 @@ jQuery(function($) {
 
             let product_id = $(this).data("id");
             let product_qty = $(this).data("qty");
-
+            //let product_qty = $(".wqpmb_input_text").val();
+            //alert(product_qty);
             $.ajax({
                 type: "POST",
                 url: ajax_url,
@@ -2720,10 +2721,11 @@ jQuery(function($) {
                     qty: product_qty
                 },
                 success: function(result){
+                    //console.log(product_qty);
                     $(document.body).trigger('added_to_cart');
                 }
-            })
-        })
+            });
+        });
         
     });
 });
