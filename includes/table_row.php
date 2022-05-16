@@ -98,6 +98,7 @@ foreach( $table_column_keywords as $keyword => $keyword_title ){
          */
         $file = $requested_file = apply_filters( 'wpto_item_final_loc', $file, $file_name, $items_directory_2, $keyword, $table_ID, $settings, $items_permanent_dir );
 
+        // var_dump($file);
         if( !file_exists( $file ) ){
             $file = $items_permanent_dir . 'default.php';
             $file = apply_filters( 'wpto_defult_file_loc', $file, $keyword, $product, $settings);

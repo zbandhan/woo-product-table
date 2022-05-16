@@ -72,6 +72,9 @@ if( ! defined( 'WPT_OPTION_KEY' ) ){
     define( "WPT_OPTION_KEY", 'wpt_configure_options' ); //aDDED TO NEW VERSION
 }
 
+
+// var_dump(WPT_OPTION_KEY,WPT_PLUGIN_FILE_NAME);
+
 /**
  * Default Configuration for WOO Product Table Pro
  * 
@@ -88,6 +91,7 @@ include_once( ABSPATH . 'wp-admin/includes/plugin.php' );
 WPT_Product_Table::getInstance();
 
 $column_array = array(
+    'aaaaa'         => __( 'AAAAAAAAAAAA', 'wpt_pro' ),
     'check'         => __( 'Check', 'wpt_pro' ),
     'thumbnails'    => __( 'Thumbnails', 'wpt_pro' ),
     'product_title' => __( 'Products', 'wpt_pro' ),
