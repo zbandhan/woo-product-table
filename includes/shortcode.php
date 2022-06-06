@@ -1182,7 +1182,7 @@ if( ! function_exists( 'wpt_filter_box' ) ){
     function wpt_filter_box($temp_number, $filter_keywords = false ){
 
         $html = $html_select = false;
-        
+        var_dump($filter_keywords);
         $config_value = wpt_get_config_value( $temp_number ); //V5.0 temp number is post_ID , $table_ID
         /**
          * Texonomies Handle based on $search_box_texonomiy_keyword
