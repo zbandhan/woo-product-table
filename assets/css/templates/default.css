@@ -16,7 +16,7 @@ base class default_wrapper
   text-decoration: none !important;
 }
 
-.default_wrapper .woocommerce-mini-cart__buttons.buttons a {
+.default_wrapper .woocommerce-mini-cart__buttons.buttons a { 
   background: var(--wpt-default-primary);
   font-size: 14px;
   font-weight: 400;
@@ -379,7 +379,7 @@ color:var(--wpt-default-primary)
   padding: 2px 5px;
   font-weight: normal;
   background: transparent;
-  color: white;
+  color: var(--wpt-default-primary);
   text-decoration: none;
   letter-spacing: 2px;
 }
