@@ -133,7 +133,7 @@ base class default_wrapper
 
 .default_wrapper table tbody th,
 .default_wrapper table tbody td {
-  color: #7ea6b1;
+  color: #02485a;
   padding-bottom: 15px;
   padding-top: 15px;
   font-weight: 400;
@@ -421,7 +421,7 @@ color:var(--wpt-default-primary)
   padding: 2px 5px;
   font-weight: normal;
   background: transparent;
-  color: var(--wpt-default-primary);
+  color:#02487d;  
   text-decoration: none;
   letter-spacing: 2px;
 }
