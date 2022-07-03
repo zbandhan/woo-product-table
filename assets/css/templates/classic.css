@@ -299,9 +299,9 @@ base class smart_classic_wrapper
   .classic_wrapper .wpt_table_pagination span.page-numbers:hover,
   .classic_wrapper .wpt_table_pagination span.page-numbers:focus {
     background: var(--smart-blue);
-    color: #fff;
+    color: #000;
   }
-  
+ 
   .classic_wrapper th.wpt_check label {
     margin-left: -1px;
   }
