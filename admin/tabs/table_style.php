@@ -1,8 +1,9 @@
 <?php
 $templates_default = array(
-    'none'          =>  __( 'Select None', 'wpt_pro' ),
-    'default'       =>  __( 'Default Style', 'wpt_pro' ),
-    'beautiful_blacky' =>  __( 'Beautiful Blacky', 'wpt_pro' ),
+    'none'              =>  __( 'Select None', 'wpt_pro' ),
+    'default'           =>  __( 'Default Style', 'wpt_pro' ),
+    'beautiful_blacky'  =>  __( 'Beautiful Blacky', 'wpt_pro' ),
+    'classic'           =>  __( 'Classic', 'wpt_pro' ),    
 );
 $pro_templates = array(
     'smart'         =>  __( 'Smart Thin', 'wpt_pro' ),
