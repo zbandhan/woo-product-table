@@ -442,5 +442,5 @@ color:var(--wpt-default-primary)
 }
 .wpt_product_table_wrapper .search_single label.search_keyword_label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 5px; 
 }
