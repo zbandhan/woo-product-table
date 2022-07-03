@@ -7,103 +7,6 @@ Blue Template - blue
 */
 
 
-
-
-/********************** Template: green************************************/
-.green_table{
-	position: relative;
-	border-collapse: collapse;
-	background: white;
-	width: 100%;
-	margin: 0 auto;
-}
-.green_table thead .wpt_table_header_row th{
-	height: 50px;
-	color: #fff;
-	background: #00b20b;
-}
-.green_table td,
-.green_table th {
-	padding: 10px;
-}
-.green_table tbody tr td{
-	border: 1px solid #e1e1e1;
-}
-.green_table .wpt_row td img{
-        height: auto;
-} 
-.green_table tbody tr{
-	transition: all .5s;
-}
-
-.green_table tbody tr:hover{
-	background: #f7faff;
-}
-.green_table tbody tr a.button{
-	display: inline-block;
-    padding: 10px;
-    background: #00b20b;
-    color: #fff;
-    font-size: 14px;
-    border-radius: 3px;
-    font-weight: bold;
-}
-table#wpt_table.wpt_product_table.green_table thead>tr>th.this_column_sorted {
-    background-color: rgb(3, 130, 10) !important;
-}
-/********************** Template: green End************************************/
-
-
-/********************** Template: blue************************************/
-
-.blue_table{
-	position: relative;
-	border-collapse: collapse;
-	background: white;
-	width: 100%;
-	margin: 0 auto;
-}
-.blue_table thead .wpt_table_header_row th{
-	height: 50px;
-	color: #fff;
-	background: #0824a5;
-}
-.blue_table td,
-.blue_table th {
-	padding: 10px;
-}
-.blue_table tbody tr td{
-	border: 1px solid #e1e1e1;
-}
-.blue_table .wpt_row td img{
-        height: auto;
-} 
-.blue_table tbody tr{
-	transition: all .5s;
-}
-
-.blue_table tbody tr:hover{
-	background: #f7faff;
-}
-.blue_table tbody tr a.button{
-	display: inline-block;
-    padding: 10px;
-    background: #0824a5;
-    color: #fff;
-    font-size: 14px;
-    border-radius: 3px;
-    font-weight: bold;
-}
-
-table#wpt_table.wpt_product_table.blue_table thead>tr>th.this_column_sorted {
-    background-color: rgb(40, 76, 241) !important;
-}
-
-/********************** Template: blue End************************************/
-
-
-
-
 /*******************************End of Business Style***************************/
 .business_table{
 	position: relative;
@@ -196,7 +99,6 @@ table#wpt_table.wpt_product_table.business_table thead>tr>th.this_column_sorted 
 .custom_table tbody tr a.button.adding.wc-variation-selection-needed,
 .custom_table tbody tr a.button.disabled,.custom_table tbody tr a.button.alt.disabled{
     padding: 8px 9px;
-    background: #ff7f57;
     color: #fff;
     font-size: 13px;
     border-radius: 5px;
