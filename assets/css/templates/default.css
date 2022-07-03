@@ -74,8 +74,8 @@ base class default_wrapper
 .default_wrapper table tbody tr a.button.disabled,
 .default_wrapper table tbody tr a.button.alt.disabled {
   padding: 8px 9px;
-  background:var(--wpt-default-primary);
-  color: #fff;
+  background:var(--wpt-default-primary) !important;
+  color: #fff !important;
   font-size: 14px;
   border-radius: 3px;
   font-weight: 400;
@@ -88,8 +88,8 @@ base class default_wrapper
 .default_wrapper table tbody tr a.button:hover.disabled,
 .default_wrapper table tbody tr a.button:hover.alt.disabled {
   padding: 8px 9px;
-  background:transparent;
-  color: var(--wpt-default-primary);
+  background:transparent !important;
+  color: var(--wpt-default-primary) !important;
   border: 1px solid var(--wpt-default-primary);
 }
 /* advanced action button (fatima) */
@@ -100,7 +100,7 @@ base class default_wrapper
 .wpt_table_body .default_wrapper button.single_add_to_cart_button.disabled,
 .wpt_table_body .default_wrapper button.single_add_to_cart_button.alt.disabled {
   padding: 8px 9px;
-  background: var(--wpt-default-primary);
+  background: var(--wpt-default-primary) !important;
   color: #fff !important;
   font-size: 14px;
   border-radius: 3px;
@@ -370,17 +370,25 @@ color:var(--wpt-default-primary)
   color: #333;
   border: none;
   padding: 0 5px;
-  border: 1px solid #90cbed;
+  border: 1px solid #90cbed; 
   box-shadow: unset;
 }
 /* plus minus button (fatima) */
 .default_wrapper .qib-button-wrapper button.qib-button {
+  background-color: transparent;
   padding: 6px 16px 8px;
   color: var(--wpt-default-primary);
   border: 1px solid var(--wpt-default-dark-border);
 
 }
 
+/* column fixed fatima */
+.default_wrapper .wpt_search_box .search_box_wrapper .search_single.search_single_direct {
+  display: flex;
+  justify-content: center;
+  align-items: end;
+
+}
  .default_wrapper .qib-button-wrapper button.qib-button:hover {
   padding: 6px 16px 8px;
   background-color: transparent;
