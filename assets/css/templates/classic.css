@@ -10,7 +10,7 @@ base class smart_classic_wrapper
   
   .classic_wrapper a,
   .classic_wrapper a:hover {
-    text-decoration: none !important;
+    text-decoration: none !important; 
   }
   
   .classic_wrapper .woocommerce-mini-cart__buttons.buttons a {
@@ -74,7 +74,7 @@ base class smart_classic_wrapper
   }
   
   /* advanced action button (fatima) */
-  body.wpt_table_body .classic_wrapper button,
+  /* body.wpt_table_body .classic_wrapper button,
   body.wpt_table_body .classic_wrapper button.adding,
   body.wpt_table_body .classic_wrapper button.alt.wc-variation-selection-needed,
   body.wpt_table_body .classic_wrapper button.adding.wc-variation-selection-needed,
@@ -88,7 +88,7 @@ base class smart_classic_wrapper
     font-weight: 400;
     text-decoration: none;
     border: 1px solid var(--classic-primary);
-    transition: all 500ms linear 0s;
+   button
   }
   body.wpt_table_body .classic_wrapper table tbody tr a.button:hover,
   body.wpt_table_body .classic_wrapper table tbody tr a.button:hover.adding,
@@ -99,7 +99,7 @@ base class smart_classic_wrapper
     background-color: transparent !important;
     border: 1px solid var(--smart-blue);
     color: var(--smart-blue) !important;
-  }
+  } */
   /* advanced action button (fatima) */
   .wpt_table_body .classic_wrapper button.single_add_to_cart_button,
   .wpt_table_body .classic_wrapper button.single_add_to_cart_button.adding,
@@ -108,7 +108,7 @@ base class smart_classic_wrapper
   .wpt_table_body .classic_wrapper button.single_add_to_cart_button.disabled,
   .wpt_table_body .classic_wrapper button.single_add_to_cart_button.alt.disabled {
     padding: 8px 9px;
-    background: var(--classic-primary); 
+    background: var(--classic-primary) !important; 
     color: #fff !important;
     font-size: 14px;
     border-radius: 3px;
@@ -442,21 +442,31 @@ base class smart_classic_wrapper
   .classic_wrapper .td_or_cell.wpt_check {
     display: table-cell !important
   }
-
+  .wpt_product_table_wrapper .qib-button.qib-button-wrapper {
+    position: relative;
+  }
   .wpt_product_table_wrapper .qib-button.qib-button-wrapper .plus.qib-button {
     position: absolute;
     top: 0;
     right: 0;
     /* width: 25px; */
-    background: #5c6b79;
-    /* background: var(--astha-light-dark); */
+    background: var(--classic-secondary);
     color: #ffffff;
     font-size: 23px;
+}
+.wpt_product_table_wrapper .qib-button.qib-button-wrapper .minus.qib-button {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 25px;
+  background: var(--classic-primary);
+  color: #ffffff;
+  font-size: 26px;
 }
 
 .wpt_product_table_wrapper .qib-button.qib-button-wrapper button.qib-button {
     padding: 2px;
-    min-height: 25px;
+    /* min-height: 25px; */
     height: auto;
     border: none;
 }
@@ -467,7 +477,6 @@ base class smart_classic_wrapper
     width: 25px;
     background: transparent;
     color: #5c6b79;
-    color: var(--astha-light-dark);
     font-size: 22px;
 }
   
@@ -488,10 +497,10 @@ base class smart_classic_wrapper
     font-weight: 600;
   }
   
-  body.wpt_table_body .classic_wrapper table tbody tr a.button:hover {
+  /* body.wpt_table_body .classic_wrapper table tbody tr a.button:hover {
     background-color: var(--smart-blue);
     color: #fff;
-  }
+  } */
   
   .classic_wrapper .wpt_product_table_wrapper select,
   .wpt_varition_section select {
@@ -587,18 +596,31 @@ base class smart_classic_wrapper
   .classic_wrapper tbody tr a.button.adding.wc-variation-selection-needed, 
   .classic_wrapper tbody tr a.button.disabled, 
   .classic_wrapper tbody tr a.button.alt.disabled {
-    background: var(--classic-primary);
-    color: #fff;
+    background: var(--classic-primary) !important;
+    color: #fff !important;
     font-size: 16px;
     border-radius: 0px;
     font-weight: 600;
-    border: 1px solid var(--classic-primary);
+    border: 2px solid var(--classic-primary);
     padding: 0.6em 1em 0.5em;
+    transition: all 500ms linear 0s;
+   
+  
+  }
+  .classic_wrapper tbody tr a.button:hover, 
+  .classic_wrapper tbody tr a.button:hover.adding, 
+  .classic_wrapper tbody tr a.button:hover.alt.wc-variation-selection-needed, 
+  .classic_wrapper tbody tr a.button:hover.adding.wc-variation-selection-needed, 
+  .classic_wrapper tbody tr a.button:hover.disabled, 
+  .classic_wrapper tbody tr a.button:hover.alt.disabled {
+    background: transparent !important; 
+    color: var(--classic-primary) !important;
+    border: 2px solid var(--classic-primary);
   }
 
-  .classic_wrapper tbody tr:hover a.button{
+  /* .classic_wrapper tbody tr:hover a.button{
     color: rgb(247, 245, 245) !important;
-  }
+  } */
   .classic_wrapper table thead {
     border-bottom: 2px solid #141618;
   }
