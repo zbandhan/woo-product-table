@@ -4,12 +4,13 @@ $templates_default = array(
     'default'           =>  __( 'Default Style', 'wpt_pro' ),
     'beautiful_blacky'  =>  __( 'Beautiful Blacky', 'wpt_pro' ),
     'classic'           =>  __( 'Classic', 'wpt_pro' ),    
+    'blue_border'       =>  __( 'Blue Border', 'wpt_pro' ),
 );
 $pro_templates = array(
     'smart'         =>  __( 'Smart Thin', 'wpt_pro' ),
     'green'         =>  __( 'Green Style', 'wpt_pro' ),
     'blue'          =>  __( 'Blue Style', 'wpt_pro' ),
-    'dark'          =>  __( 'Dark Style', 'wpt_pro' ),
+    'dark'          =>  __( 'Dark Style', 'wpt_pro' ), 
     'smart_light'   =>  __( 'Smart Light', 'wpt_pro' ),
     'custom'       =>  __( 'Customized Design', 'wpt_pro' ),
 );
