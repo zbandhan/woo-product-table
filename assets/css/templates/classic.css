@@ -147,12 +147,12 @@ body.wpt_table_body .classic_wrapper table tbody tr a.button:hover.alt.disabled 
 
 /* fatima  */
 .classic_wrapper .woocommerce-mini-cart__buttons.buttons a {
-  background: var(--smart-blue);
-  font-size: var(--smart-font-size);
+ background: var(--classic-primary);
+  font-size: 14px;
   font-weight: 400;
   border-radius: 3px;
   color: #fff !important;
-  border: 1px solid var(--smart-blue);
+  border: 1px solid  var(--classic-primary);
 }
 
 .classic_wrapper .widget_shopping_cart_content .woocommerce-mini-cart__buttons.buttons a {
@@ -161,8 +161,8 @@ body.wpt_table_body .classic_wrapper table tbody tr a.button:hover.alt.disabled 
 
 .classic_wrapper .woocommerce-mini-cart__buttons.buttons a:hover {
   background: transparent;
-  color: var(--smart-blue) !important;
-  border: 1px solid var(--smart-blue);
+  color: var(--classic-primary) !important;
+  border: 1px solid  var(--classic-primary);
 }
 
 /* star ratting (fatima) */
