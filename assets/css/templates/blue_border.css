@@ -443,6 +443,7 @@ body.wpt_table_body .blue_border_wrapper table.blue_border_table tbody tr.wpt_ro
   border-left-style: solid; 
   color:#000; 
   font-size: 16px;
+  padding:8px 20px;
 }
 /* fatima  */
 body.wpt_table_body .blue_border_wrapper table tbody tr.wpt_row>td a.wpt_product_title_in_td {
@@ -452,6 +453,7 @@ body.wpt_table_body .blue_border_wrapper table tbody tr.wpt_row>td a.wpt_product
   font-size: 16px;
   line-height: 28px; 
   background: transparent; 
+  margin-bottom: 5px;
 }
 body.wpt_table_body .blue_border_wrapper table tbody tr.wpt_row>td .product_description {
   color: #6d6d6d;
@@ -459,7 +461,8 @@ body.wpt_table_body .blue_border_wrapper table tbody tr.wpt_row>td .product_desc
   text-decoration: none !important; 
   font-size: 14px;
   left: 22px;
-  background: transparent;  
+  background: transparent; 
+  margin-right: 35px;  
 }
 
 
