@@ -108,16 +108,17 @@ body.wpt_table_body .classic_wrapper table tbody tr a.button:hover.alt.disabled 
 .wpt_table_body .classic_wrapper button.single_add_to_cart_button.disabled,
 .wpt_table_body .classic_wrapper button.single_add_to_cart_button.alt.disabled {
   padding: 8px 9px;
-  background: var(--classic-primary) !important; 
+  background: var(--classic-primary) !important;
   color: #fff !important;
   font-size: 14px;
   border-radius: 3px;
   font-weight: 400;
   margin-top: 0;
   text-decoration: none;
-  border:1px solid var(--classic-primary); 
+  border:1px solid
+  var(--classic-primary);
   transition: all 500ms linear 0s;
-
+  white-space: nowrap;
 }
 /* advanced action button (fatima) */
 .wpt_table_body .classic_wrapper button.single_add_to_cart_button:hover,
@@ -620,4 +621,7 @@ body .classic_wrapper .search_single .query_box_direct_value{
 }
 .classic_wrapper .search_single.search_single_direct label{
   margin-bottom: 5px;
+}
+.shop_table.price-rules-table thead{
+background-color: transparent !important;
 }
