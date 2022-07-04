@@ -3,7 +3,7 @@
     --blue-border-primary: #56a0d1;
     --blue-border-secondary: #5c6b79;
     --blue-border-light: #fcfcfc;
-    --blue-border-text-color: #5198a3;
+    --blue-border-text-color: #021d33;
   }
   
   /*Smart Light Table*/
@@ -20,6 +20,7 @@
     font-size: var(--smart-font-size);
     font-weight: 400;
     border-radius: 3px;
+    font-size: 13px;
     color: #fff !important;
     border:1px solid var(--blue-border-primary); 
   }
@@ -62,7 +63,7 @@
 
   }
   
-  /* advanced action button (fatima) */
+  /* advanced action button (fatima) */ 
   .wpt_table_body .blue_border_wrapper button,
   .wpt_table_body .blue_border_wrapper button.adding,
   .wpt_table_body .blue_border_wrapper button.alt.wc-variation-selection-needed,
@@ -72,9 +73,9 @@
     padding: 8px 9px;
     background: var(--beautiful-blue);
     color: #fff;
-    font-size: 14px;
-    border-radius: 3px;
-    font-weight: 400;
+    font-size: 13px;
+    border-radius: 5px;
+    font-weight: 700;
     text-decoration: none;  
   
   }
@@ -89,9 +90,9 @@
     padding: 8px 9px;
     background: var(--blue-border-primary);
     color: #fff !important;
-    font-size: 14px;
-    border-radius: 3px;
-    font-weight: 400;
+    font-size: 13px;
+    border-radius: 5px;
+    font-weight: 700;
     margin-top: 0;
     text-decoration: none;
     border:1px solid var(--blue-border-primary);
@@ -117,26 +118,67 @@
     justify-content: center;
     align-items: center;
     gap: 10px;
+    margin-bottom: 0; 
   }
   
   .blue_border_wrapper .td_or_cell.wpt_check {
     display: table-cell !important;
   }
   /* plus minus button (fatima) */
-   .blue_border_wrapper .qib-button-wrapper button.qib-button {
-    padding: 6px 16px 8px;
-    background-color:  var(--blue-border-primary); 
-    color:#fff; 
-    border: 1px solid  var(--blue-border-primary);
   
-  }
-   .blue_border_wrapper .qib-button-wrapper button.qib-button:hover {
+  .blue_border_wrapper .qib-button-wrapper button.qib-button {
+    padding: 6px 16px 8px;
+    border-color: #e1e1e1;
+    background-color: #ebebeb !important;
+    color: #919191 !important;
+} 
+.blue_border_wrapper .qib-button.qib-button-wrapper .plus.qib-button {
+  vertical-align: middle;
+  border: none;
+  cursor: pointer;
+  margin-left: -4px;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  background-color: #F8F8F8;
+  border: 1px solid #E1E1E1;
+  color: #666;
+  outline: none;
+}
+.blue_border_wrapper .qib-button.qib-button-wrapper .minus.qib-button { 
+  vertical-align: middle;
+  border: none;
+  cursor: pointer;
+  margin-right: -4px;
+  display: inline-block;
+  border: 0;
+  border-radius: 0;
+  -webkit-appearance: none;
+  background-color: #F8F8F8;
+  border: 1px solid #E1E1E1;
+  color: #666;
+  outline: none;
+}
+.blue_border_wrapper .qib-button-wrapper .quantity input.input-text.qty.text {
+  height: 41px;
+  padding: 6px 12px 8px;
+  text-align: center;
+  background: #ffffff;
+  border: 1px solid #E1E1E1;
+  font-size: 20px;
+  line-height: 20px;
+  box-shadow: none;
+  border-radius: 0;
+}
+
+   /* .blue_border_wrapper .qib-button-wrapper button.qib-button:hover {
     padding: 6px 16px 8px;
     background-color:  transparent; 
     color:  var(--blue-border-primary);
     border:1px solid  var(--blue-border-primary);
   
-  }
+  } */
   /* star ratting (fatima) */
   .blue_border_wrapper table tbody th .star-rating,
   .blue_border_wrapper table tbody td .star-rating {
@@ -216,26 +258,27 @@
   }
   /* add to card button start (fatima) */
   .wpt_table_body .blue_border_wrapper .smart_light_table.custom_table tbody tr a.button,
-  .wpt_table_body .blue_border_wrapper .caqv-open-modal,
+  .wpt_table_body .blue_border_wrapper .quick_view .caqv-open-modal,
   .wpt_table_body .blue_border_wrapper button,
   .wpt_table_body .blue_border_wrapper .button {
     background-color: var(--blue-border-primary) !important;
-    font-size: var(--smart-font-size);
-    font-weight: 400;
+    font-size: 13px;
+    font-weight: 700;
     border-radius: 5px;
-    color: #fff !important;
+    color: #fff !important;  
     text-decoration: none;
     border: 1px solid var(--blue-border-primary);
     margin-top:0;  
   }
   .blue_border_wrapper .smart_light_table.custom_table tbody tr a.button:hover,
-  .blue_border_wrapper .caqv-open-modal,
+  .blue_border_wrapper .quick_view .caqv-open-modal,
   .blue_border_wrapper button:hover,
   .blue_border_wrapper .button:hover {
     background-color:transparent !important;  
     color: var(--blue-border-primary) !important;
     border: 1px solid var(--blue-border-primary);  
   }
+
   /* add to card button end (fatima) */
   .blue_border_wrapper .wpt_table_pagination span.page-numbers.current,
   .blue_border_wrapper .wpt_table_pagination a.page-numbers.current {
@@ -263,31 +306,7 @@
     transition: .3s all ease;
   }
   
-  .blue_border_wrapper table tbody tr th:before,
-  .blue_border_wrapper table tbody tr th:after,
-  .blue_border_wrapper table tbody tr td:before,
-  .blue_border_wrapper table tbody tr td:after {
-    -webkit-transition: .3s all ease;
-    -o-transition: .3s all ease;
-    transition: .3s all ease;
-    content: "";
-    left: 0;
-    right: 0;
-    position: absolute;
-    height: 1px;
-    background: var(--blue-border-primary);
-    width: 100%;
-    opacity: 0;
-    visibility: hidden;
-  }
-  
-  .blue_border_wrapper table tbody tr:hover th:before,
-  .blue_border_wrapper table tbody tr:hover th:after,
-  .blue_border_wrapper table tbody tr:hover td:before,
-  .blue_border_wrapper table tbody tr:hover td:after {
-    opacity: 1;
-    visibility: visible;
-  }
+ 
   
   .blue_border_wrapper table tbody tr th:after,
   .blue_border_wrapper table tbody tr td:after {
@@ -318,12 +337,12 @@
   .blue_border_wrapper .all_check_header_footer .button.add_to_cart_all_selected {
     background: #ffffff;
     padding: 13px 15px;
-    font-size: var(--smart-font-size);
+    font-size: 14px;
     margin-left: 10px;
     font-weight: 400;
     color: #333;
     font-family: -webkit-body;
-    border: 1px solid var(--smart-light-border);
+    border: 1px solid var(--blue-border-primary);
     border-radius: 5px;
     display: flex;
     justify-content: center;
@@ -339,7 +358,7 @@
     background: #ffffff;
     display: flex;
     padding: 7px;
-    border: 1px solid var(--smart-light-border);
+    border: 1px solid var(--blue-border-primary);
     justify-content: center;
     align-items: center;
     color: #212f52;
@@ -355,7 +374,7 @@
     color: #fff;
     font-weight: 500;
     border-radius: 3px;
-    font-size: var(--smart-font-size);
+    font-size: 14px;
   }
   
   .blue_border_wrapper .all_check_header_footer input[type=checkbox]+label,
@@ -363,7 +382,7 @@
     font-size: var(--smart-font-size);
   }
   
-  blue_border_wrapper .all_check_header_footer.all_check_header>span:hover {
+  .blue_border_wrapper .all_check_header_footer.all_check_header>span:hover {
     color: var(--blue-border-primary);
   }
   
@@ -399,11 +418,54 @@
     color: #fff;
   }
   
-  .blue_border_wrapper table:not(.has-background) tbody tr:nth-child(2n) td,
-  .blue_border_wrapper table:not(.has-background) th {
-    background-color: var(--smart-light-blue);
-  }
-  
+  .blue_border_wrapper .wpt_product_table tr>th {
+    background: var(--blue-border-primary);
+    color: #fff;
+    border-color: #e1e1e1;
+    border-left-width: 1px;
+    border-left-style: solid;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 1.5px;
+    font-weight: 400;
+    font-size: 14px;
+}
+.blue_border_wrapper tbody tr td { 
+  border: 1px solid #F6F6F6;
+}
+.blue_border_wrapper .custom_table>tbody>tr:nth-child(2n+2)>td {
+  background: #f5f5f5;
+  background-color: #f5f5f5;
+}
+body.wpt_table_body .blue_border_wrapper table.blue_border_table tbody tr.wpt_row>td { 
+  border-color: #F6F6F6;
+  border-left-width: 1px;
+  border-left-style: solid; 
+  color:#000; 
+  font-size: 16px;
+  padding:8px 20px;
+}
+/* fatima  */
+body.wpt_table_body .blue_border_wrapper table tbody tr.wpt_row>td a.wpt_product_title_in_td {
+  color: var(--blue-border-text-color);
+  font-weight: 700; 
+  text-decoration: none !important; 
+  font-size: 16px;
+  line-height: 28px; 
+  background: transparent; 
+  margin-bottom: 5px;
+}
+body.wpt_table_body .blue_border_wrapper table tbody tr.wpt_row>td .product_description {
+  color: #6d6d6d;
+  font-weight: 400; 
+  text-decoration: none !important; 
+  font-size: 14px;
+  left: 22px;
+  background: transparent; 
+  margin-right: 35px;  
+}
+
+
   .blue_border_wrapper th.wpt_check label {
     margin-left: -5px;
   }
@@ -414,16 +476,19 @@
     width: 100%;
     border-radius: 4px;
     padding: 6px 5px 5px 5px;
-    border: 1px solid var(--smart-light-border);
+    border: 1px solid var(--blue-border-primary);
     padding: 12px;
-    height: 42px;
+    height: 45px;
+    font-size: 14px;
+    font-weight: 400;
+    color: #000; 
   }
   
   .blue_border_wrapper a:focus,
   .blue_border_wrapper input:focus,
   .blue_border_wrapper textarea:focus,
   .blue_border_wrapper button:focus {
-    outline: 2px solid var(--blue-border-primary);
+    outline: 1px solid transparent;
   }
   
   .blue_border_wrapper .search_single_column {
@@ -469,7 +534,7 @@
     text-align: center;
     border-radius: 3px;
     height: 40px;
-    border: 1px solid var(--blue-border-primary);
+    border: 1px solid #E1E1E1;
     color: #141618;
     padding: 0 5px;
   }
