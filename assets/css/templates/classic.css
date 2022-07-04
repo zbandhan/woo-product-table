@@ -190,7 +190,7 @@ margin-bottom: 10px;
   -webkit-transition: .3s all ease;
   -o-transition: .3s all ease;
   transition: .3s all ease;
-  border-bottom: 1px solid #0fc392;
+  border-bottom: 1px solid #5d6b7942;
 }
 
 .classic_wrapper table tbody tr:not(.spacer):hover {
