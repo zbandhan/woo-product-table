@@ -3,14 +3,14 @@ base class smart_classic_wrapper
 */
 :root {
   --classic-primary: #0fc392;
-  --classic-secondary:#5c6b79;
-  --classic-light:#f4f9fc;
-  --classic-text-color:#5198a3;
+  --classic-secondary: #5c6b79;
+  --classic-light: #f4f9fc;
+  --classic-text-color: #5198a3;
 }
 
 .classic_wrapper a,
 .classic_wrapper a:hover {
-  text-decoration: none !important; 
+  text-decoration: none !important;
 }
 
 .classic_wrapper .woocommerce-mini-cart__buttons.buttons a {
@@ -50,7 +50,7 @@ base class smart_classic_wrapper
 
 .classic_wrapper table.classic_table tbody tr td .wpt_product_title_in_td:hover {
   color: #111111;
-  background:transparent
+  background: transparent
 }
 
 /* advanced action button  */
@@ -65,12 +65,13 @@ base class smart_classic_wrapper
 .classic_wrapper table span.wpt-pro-tag-on-sale {
   display: inline-block;
   padding: 2px;
-  border: 1px solid var(--smart-blue);
-  background: var(--smart-blue);
   color: #fff;
   font-weight: 500;
   border-radius: 3px;
-  font-size: 16px;
+  font-size: 16px; 
+  border: 1px solid #0a7f9c;
+  background: #0a7f9c;
+
 }
 
 /* advanced action button (fatima) */
@@ -87,9 +88,10 @@ body.wpt_table_body .classic_wrapper button.alt.disabled {
   border-radius: 0px;
   font-weight: 400;
   text-decoration: none;
-  border: 1px solid var(--classic-primary); 
- 
+  border: 1px solid var(--classic-primary);
+
 }
+
 body.wpt_table_body .classic_wrapper table tbody tr a.button:hover,
 body.wpt_table_body .classic_wrapper table tbody tr a.button:hover.adding,
 body.wpt_table_body .classic_wrapper table tbody tr a.button:hover.alt.wc-variation-selection-needed,
@@ -97,9 +99,10 @@ body.wpt_table_body .classic_wrapper table tbody tr a.button:hover.adding.wc-var
 body.wpt_table_body .classic_wrapper table tbody tr a.button:hover.disabled,
 body.wpt_table_body .classic_wrapper table tbody tr a.button:hover.alt.disabled {
   background-color: transparent !important;
-  border: 1px solid var(--classic-primary); 
-  color: var(--classic-primary) !important;  
+  border: 1px solid var(--classic-primary);
+  color: var(--classic-primary) !important;
 }
+
 /* advanced action button (fatima) */
 .wpt_table_body .classic_wrapper button.single_add_to_cart_button,
 .wpt_table_body .classic_wrapper button.single_add_to_cart_button.adding,
@@ -115,11 +118,11 @@ body.wpt_table_body .classic_wrapper table tbody tr a.button:hover.alt.disabled 
   font-weight: 400;
   margin-top: 0;
   text-decoration: none;
-  border:1px solid
-  var(--classic-primary);
+  border: 1px solid var(--classic-primary);
   transition: all 500ms linear 0s;
   white-space: nowrap;
 }
+
 /* advanced action button (fatima) */
 .wpt_table_body .classic_wrapper button.single_add_to_cart_button:hover,
 .wpt_table_body .classic_wrapper button.single_add_to_cart_button:hover.adding,
@@ -127,9 +130,9 @@ body.wpt_table_body .classic_wrapper table tbody tr a.button:hover.alt.disabled 
 .wpt_table_body .classic_wrapper button.single_add_to_cart_button:hover.adding.wc-variation-selection-needed,
 .wpt_table_body .classic_wrapper button.single_add_to_cart_button:hover.disabled,
 .wpt_table_body .classic_wrapper button.single_add_to_cart_button:hover.alt.disabled {
- background: transparent !important;
- border: 1px solid var(--classic-primary);
- color: var(--classic-primary) !important;
+  background: transparent !important;
+  border: 1px solid var(--classic-primary);
+  color: var(--classic-primary) !important;
   text-decoration: none;
 
 }
@@ -145,20 +148,21 @@ body.wpt_table_body .classic_wrapper table tbody tr a.button:hover.alt.disabled 
 /* fatima  */
 .classic_wrapper .woocommerce-mini-cart__buttons.buttons a {
   background: var(--smart-blue);
-  font-size: var(--smart-font-size); 
+  font-size: var(--smart-font-size);
   font-weight: 400;
   border-radius: 3px;
   color: #fff !important;
-  border:1px solid var(--smart-blue);
+  border: 1px solid var(--smart-blue);
 }
+
 .classic_wrapper .widget_shopping_cart_content .woocommerce-mini-cart__buttons.buttons a {
-margin-bottom: 10px;  
+  margin-bottom: 10px;
 }
 
 .classic_wrapper .woocommerce-mini-cart__buttons.buttons a:hover {
   background: transparent;
-  color: var(--smart-blue) !important; 
-  border:1px solid var(--smart-blue);
+  color: var(--smart-blue) !important;
+  border: 1px solid var(--smart-blue);
 }
 
 /* star ratting (fatima) */
@@ -242,7 +246,7 @@ body.wpt_table_body .classic_wrapper table.wpt_product_table thead {
 /*Checkbox*/
 
 .classic_wrapper.wpt_product_table_wrapper input[type=checkbox]:checked+label:before {
-  background:var(--classic-primary);
+  background: var(--classic-primary);
   border-color: var(--classic-light);
 }
 
@@ -417,10 +421,12 @@ body .classic_wrapper .instance_search_input {
   border: 1px solid #e3e3e3;
   box-shadow: unset;
 }
+
 .classic_wrapper .qib-button.qib-button-wrapper .quantity input.input-text.qty.text {
   background-color: #f4f9fc;
   border-radius: 0;
 }
+
 .classic_wrapper input[type=number]::-webkit-inner-spin-button,
 .classic_wrapper input[type=number]::-webkit-outer-spin-button {
   opacity: 0.7;
@@ -444,9 +450,11 @@ body .classic_wrapper .instance_search_input {
 .classic_wrapper .td_or_cell.wpt_check {
   display: table-cell !important
 }
+
 .wpt_product_table_wrapper .qib-button.qib-button-wrapper {
   position: relative;
 }
+
 .wpt_product_table_wrapper .qib-button.qib-button-wrapper .plus.qib-button {
   position: absolute;
   top: 0;
@@ -458,15 +466,16 @@ body .classic_wrapper .instance_search_input {
   text-align: center;
   height: 22px;
 }
+
 .wpt_product_table_wrapper .qib-button.qib-button-wrapper .minus.qib-button {
-position: absolute;
-right: 0;
-bottom: 0;
-width: 25px;
-background: var(--classic-primary);
-color: #ffffff;
-font-size: 26px;
-text-align: center;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  width: 25px;
+  background: var(--classic-primary);
+  color: #ffffff;
+  font-size: 26px;
+  text-align: center;
 }
 
 .wpt_product_table_wrapper .qib-button.qib-button-wrapper button.qib-button {
@@ -475,6 +484,7 @@ text-align: center;
   height: auto;
   border: none;
 }
+
 .qib-button.qib-button-wrapper .plus.qib-button {
   position: absolute;
   top: 5px;
@@ -548,7 +558,7 @@ text-align: center;
 
 /* arrows */
 
- .classic_wrapper .search_box_wrapper select {
+.classic_wrapper .search_box_wrapper select {
   width: 300px;
   padding: 12px;
   border: 0 !important;
@@ -559,13 +569,15 @@ text-align: center;
   appearance: none;
   /* SVG background image */
   background-image: url("data:image/svg+xml;charset=UTF-8,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2212%22%20height%3D%2212%22%20viewBox%3D%220%200%2012%2012%22%3E%3Ctitle%3Edown-arrow%3C%2Ftitle%3E%3Cg%20fill%3D%22%23000000%22%3E%3Cpath%20d%3D%22M10.293%2C3.293%2C6%2C7.586%2C1.707%2C3.293A1%2C1%2C0%2C0%2C0%2C.293%2C4.707l5%2C5a1%2C1%2C0%2C0%2C0%2C1.414%2C0l5-5a1%2C1%2C0%2C1%2C0-1.414-1.414Z%22%20fill%3D%22%23000000%22%3E%3C%2Fpath%3E%3C%2Fg%3E%3C%2Fsvg%3E");
-    background-size: .6em;
-    background-position: calc(100% - 1.3em) center;
-    background-repeat: no-repeat;
+  background-size: .6em;
+  background-position: calc(100% - 1.3em) center;
+  background-repeat: no-repeat;
 }
+
 .classic_wrapper .search_box_wrapper select::-ms-expand {
-    display: none;
+  display: none;
 }
+
 .classic_wrapper .search_box_wrapper select:-moz-focusring {
   color: transparent;
   text-shadow: 0 0 0 #000;
@@ -575,21 +587,24 @@ text-align: center;
   list-style: none;
   margin: 9px 5px 0 0;
 }
-body .classic_wrapper .search_single .query_box_direct_value{
+
+body .classic_wrapper .search_single .query_box_direct_value {
   background-color: #f4f9fc;
 }
 
 .classic_wrapper table tr:hover td {
   background-color: #fcfcfceb !important;
 }
+
 .classic_wrapper .wpt_varition_section.variations {
   text-align: right;
 }
-.classic_wrapper tbody tr a.button, 
-.classic_wrapper tbody tr a.button.adding, 
-.classic_wrapper tbody tr a.button.alt.wc-variation-selection-needed, 
-.classic_wrapper tbody tr a.button.adding.wc-variation-selection-needed, 
-.classic_wrapper tbody tr a.button.disabled, 
+
+.classic_wrapper tbody tr a.button,
+.classic_wrapper tbody tr a.button.adding,
+.classic_wrapper tbody tr a.button.alt.wc-variation-selection-needed,
+.classic_wrapper tbody tr a.button.adding.wc-variation-selection-needed,
+.classic_wrapper tbody tr a.button.disabled,
 .classic_wrapper tbody tr a.button.alt.disabled {
   background: var(--classic-primary) !important;
   color: #fff !important;
@@ -599,16 +614,17 @@ body .classic_wrapper .search_single .query_box_direct_value{
   border: 2px solid var(--classic-primary);
   padding: 0.6em 1em 0.5em;
   transition: all 500ms linear 0s;
- 
+
 
 }
-.classic_wrapper tbody tr a.button:hover, 
-.classic_wrapper tbody tr a.button:hover.adding, 
-.classic_wrapper tbody tr a.button:hover.alt.wc-variation-selection-needed, 
-.classic_wrapper tbody tr a.button:hover.adding.wc-variation-selection-needed, 
-.classic_wrapper tbody tr a.button:hover.disabled, 
+
+.classic_wrapper tbody tr a.button:hover,
+.classic_wrapper tbody tr a.button:hover.adding,
+.classic_wrapper tbody tr a.button:hover.alt.wc-variation-selection-needed,
+.classic_wrapper tbody tr a.button:hover.adding.wc-variation-selection-needed,
+.classic_wrapper tbody tr a.button:hover.disabled,
 .classic_wrapper tbody tr a.button:hover.alt.disabled {
-  background: transparent !important; 
+  background: transparent !important;
   color: var(--classic-primary) !important;
   border: 2px solid var(--classic-primary);
 }
@@ -619,9 +635,11 @@ body .classic_wrapper .search_single .query_box_direct_value{
 .classic_wrapper table thead {
   border-bottom: 2px solid #141618;
 }
-.classic_wrapper .search_single.search_single_direct label{
+
+.classic_wrapper .search_single.search_single_direct label {
   margin-bottom: 5px;
 }
-.shop_table.price-rules-table thead{
-background-color: transparent !important;
+
+.shop_table.price-rules-table thead {
+  background-color: transparent !important;
 }
