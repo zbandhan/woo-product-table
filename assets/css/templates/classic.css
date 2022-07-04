@@ -74,7 +74,7 @@ base class smart_classic_wrapper
 }
 
 /* advanced action button (fatima) */
-/* body.wpt_table_body .classic_wrapper button,
+body.wpt_table_body .classic_wrapper button,
 body.wpt_table_body .classic_wrapper button.adding,
 body.wpt_table_body .classic_wrapper button.alt.wc-variation-selection-needed,
 body.wpt_table_body .classic_wrapper button.adding.wc-variation-selection-needed,
@@ -83,12 +83,12 @@ body.wpt_table_body .classic_wrapper button.alt.disabled {
   padding: 6px 16px 8px;
   background: var(--classic-primary) !important;
   color: #fff !important;
-  font-size: 26px;
+  font-size: 14px;
   border-radius: 0px;
   font-weight: 400;
   text-decoration: none;
-  border: 1px solid var(--classic-primary);
- button
+  border: 1px solid var(--classic-primary); 
+ 
 }
 body.wpt_table_body .classic_wrapper table tbody tr a.button:hover,
 body.wpt_table_body .classic_wrapper table tbody tr a.button:hover.adding,
@@ -97,9 +97,9 @@ body.wpt_table_body .classic_wrapper table tbody tr a.button:hover.adding.wc-var
 body.wpt_table_body .classic_wrapper table tbody tr a.button:hover.disabled,
 body.wpt_table_body .classic_wrapper table tbody tr a.button:hover.alt.disabled {
   background-color: transparent !important;
-  border: 1px solid var(--smart-blue);
-  color: var(--smart-blue) !important;
-} */
+  border: 1px solid var(--classic-primary); 
+  color: var(--classic-primary) !important;  
+}
 /* advanced action button (fatima) */
 .wpt_table_body .classic_wrapper button.single_add_to_cart_button,
 .wpt_table_body .classic_wrapper button.single_add_to_cart_button.adding,
@@ -452,7 +452,7 @@ body .classic_wrapper .instance_search_input {
   top: 0;
   right: 0;
   /* width: 25px; */
-  background: var(--classic-secondary);
+  background: var(--classic-secondary) !important;
   color: #ffffff;
   font-size: 23px;
   text-align: center;
