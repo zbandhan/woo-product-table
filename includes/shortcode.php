@@ -892,6 +892,22 @@ if( ! function_exists( 'wpt_table_row_generator' ) ){
                     $variable = new WC_Product_Variable( $data['id'] );
 
                     $available_variations = $variable->get_available_variations();
+                    $variations_id = wp_list_pluck( $available_variations, 'variation_id' );
+
+                    // var_dump($id,$variations_id,$table_row_generator_array['args']);
+
+                    // var_dump($variations_id);
+                    $my_tot_args = $table_row_generator_array;
+                    $new_args = array(
+                        'post_type' => 'product_variation',
+                        'post_parent__in' => array($id),
+                    );
+                    $my_tot_args['args'] = $new_args;
+                    ?>
+                    Helloooooooooooooo
+                    <?php 
+                    
+                    continue;
                     $data_product_variations = htmlspecialchars( wp_json_encode( $available_variations ) );
 
 
