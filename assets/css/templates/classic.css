@@ -654,7 +654,7 @@ body .classic_wrapper .search_single .query_box_direct_value {
   color: rgb(247, 245, 245) !important;
 } */
 .classic_wrapper table thead {
-  border-bottom: 2px solid #141618;
+  border-bottom: 2px solid var(--classic-primary);
 }
 
 .classic_wrapper .search_single.search_single_direct label {
