@@ -360,7 +360,9 @@ body.wpt_table_body .beautiful_blacky_wrapper table tbody tr a.button:hover.alt.
 
 .beautiful_blacky_wrapper table:not(.has-background) tbody tr:nth-child(2n) td,
 .beautiful_blacky_wrapper table:not(.has-background) th {
-  background-color: #2a303a;
+  background-color: var(--beautiful-head);
+  font-size: 16px;
+  text-align: left;
 }
 
 .beautiful_blacky_wrapper.wpt_product_table_wrapper div.tables_cart_message_box div.widget_shopping_cart_content li.woocommerce-mini-cart-item.mini_cart_item {
