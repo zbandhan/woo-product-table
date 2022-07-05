@@ -903,10 +903,9 @@ if( ! function_exists( 'wpt_table_row_generator' ) ){
                         'post_parent__in' => array($id),
                     );
                     $my_tot_args['args'] = $new_args;
-                    ?>
-                    Helloooooooooooooo
-                    <?php 
-                    
+                    // ob_start();
+                    // var_dump(wpt_table_row_generator($my_tot_args));
+// echo do_shortcode("[Product_Table id='1221']");
                     continue;
                     $data_product_variations = htmlspecialchars( wp_json_encode( $available_variations ) );
 
