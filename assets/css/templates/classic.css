@@ -177,6 +177,7 @@ body.wpt_table_body .classic_wrapper table tbody tr a.button:hover.alt.disabled 
   border-top: none;
   border-bottom: none !important;
   color: #fff;
+  background: var( --classic-secondary);
 }
 
 .classic_wrapper table tbody th,
@@ -643,5 +644,5 @@ body .classic_wrapper .search_single .query_box_direct_value {
 }
 
 .shop_table.price-rules-table thead {
-  background-color: transparent !important;
+  background-color: transparent !important; 
 }
