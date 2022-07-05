@@ -372,7 +372,7 @@ body .classic_wrapper .instance_search_input {
   width: 100%;
   border-radius: 0;
   padding: 6px 10px 5px 10px !important;
-  border: 1px solid transparent;
+  border: 1px solid var(--classic-secondary); 
   padding: 12px;
   height: 40px;
 }
@@ -562,7 +562,8 @@ body .classic_wrapper .instance_search_input {
   width: 300px;
   padding: 12px;
   border: 0 !important;
-  background-color: var(--classic-light);
+  /* background-color: var(--classic-light); */
+  border: 1px solid var(--classic-secondary) !important;
   /* needed */
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -589,7 +590,8 @@ body .classic_wrapper .instance_search_input {
 }
 
 body .classic_wrapper .search_single .query_box_direct_value {
-  background-color: #f4f9fc;
+  /* background-color: #f4f9fc; */
+  border:1px solid var(--classic-secondary);
 }
 
 .classic_wrapper table tr:hover td {
