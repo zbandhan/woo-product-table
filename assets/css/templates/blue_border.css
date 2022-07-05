@@ -210,8 +210,8 @@
     background-color: var(--smart-light-blue);
   }
   
-  .blue_border_wrapper .smart_light_table .product_description {
-    color: #777
+  .blue_border_wrapper .blue_border_table .product_description {
+    color: #777;
   }
   
   .blue_border_wrapper .all_check_footer {
