@@ -89,6 +89,7 @@ body.wpt_table_body .classic_wrapper button.alt.disabled {
   font-weight: 400;
   text-decoration: none;
   border: 1px solid var(--classic-primary);
+  white-space: nowrap;
 
 }
 
@@ -373,16 +374,18 @@ body .classic_wrapper .instance_search_input {
   width: 100%;
   border-radius: 0;
   padding: 6px 10px 5px 10px !important;
-  border: 1px solid #0fc39247;
+  border: 1px solid #ddd; 
   padding: 12px;
   height: 40px;
 }
 
 .classic_wrapper a:focus,
 .classic_wrapper input:focus,
+.classic_wrapper select:focus, 
 .classic_wrapper textarea:focus,
 .classic_wrapper button:focus {
-  outline: 2px solid var(--smart-blue);
+  outline: 2px solid transparent;
+  color:#000;
 }
 
 .classic_wrapper .search_single_column {
@@ -496,6 +499,20 @@ body .classic_wrapper .instance_search_input {
   font-size: 22px;
 }
 
+/*=========Search Box==========*/
+.classic_wrapper .search_single .query_box_direct_value,
+.classic_wrapper .instance_search_input {
+  width: 100%;
+  border-radius: 4px;
+  padding: 6px 5px 5px 5px;
+  padding: 12px;
+  height: 45px;
+  font-size: 14px;
+  font-weight: 400;
+  color: #000;
+  line-height: 18px;
+}
+
 /*=== View Cart ===*/
 .classic_wrapper table#wpt_table.wpt_product_table a.added_to_cart.wc-forward {
   font-size: 12px;
@@ -507,7 +524,7 @@ body .classic_wrapper .instance_search_input {
   letter-spacing: 2px;
 }
 
-.classic_wrapper .smart_table.custom_table thead .wpt_table_header_row th {
+.classic_wrapper .classoc_table.custom_table thead .wpt_table_header_row th {
   color: var(--classic-primary);
   font-size: 16px;
   font-weight: 600;
@@ -582,7 +599,7 @@ body.wpt_table_body .classic_wrapper table tbody tr.wpt_row>td .product_descript
   padding: 12px;
   border: 0 !important;
   /* background-color: var(--classic-light); */
-  border: 1px solid #0fc39247 !important;
+  border: 1px solid #ddd !important;
   /* needed */
   -webkit-appearance: none;
   -moz-appearance: none;
@@ -610,7 +627,7 @@ body.wpt_table_body .classic_wrapper table tbody tr.wpt_row>td .product_descript
 
 body .classic_wrapper .search_single .query_box_direct_value {
   /* background-color: #f4f9fc; */
-  border:1px solid #0fc39247;
+  border:1px solid #ddd; 
 }
 
 .classic_wrapper table tr:hover td {
@@ -635,6 +652,7 @@ body .classic_wrapper .search_single .query_box_direct_value {
   border: 2px solid var(--classic-primary);
   padding: 0.6em 1em 0.5em;
   transition: all 500ms linear 0s;
+  white-space: nowrap;
 
 
 }
@@ -663,4 +681,7 @@ body .classic_wrapper .search_single .query_box_direct_value {
 
 .shop_table.price-rules-table thead {
   background-color: transparent !important; 
+}
+body.wpt_table_body .classic_wrapper .custom_table thead .wpt_table_header_row th {
+  white-space: nowrap; 
 }

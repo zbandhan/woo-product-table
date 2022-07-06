@@ -150,8 +150,8 @@ base class beautiful_pink_wrapper
   .wpt_table_body .pink_wrapper button.single_add_to_cart_button:hover.adding.wc-variation-selection-needed,
   .wpt_table_body .pink_wrapper button.single_add_to_cart_button:hover.disabled,
   .wpt_table_body .pink_wrapper button.single_add_to_cart_button:hover.alt.disabled {
-    background-color:  var(--pink-primary) !important;
-    border: 1px solid  var(--pink-primary);
+    background-color: #fda8bf !important;
+    border: 1px solid  #fda8bf;
     color:#fff !important;
     text-decoration: none;
   
@@ -172,6 +172,7 @@ base class beautiful_pink_wrapper
     border-radius: 3px;
     font-weight: 400;
     border: 1px solid #232323;
+    white-space: nowrap; 
   }
   
   body.wpt_table_body .pink_wrapper table tbody tr a.button:hover,
@@ -180,8 +181,8 @@ base class beautiful_pink_wrapper
   body.wpt_table_body .pink_wrapper table tbody tr a.button:hover.adding.wc-variation-selection-needed,
   body.wpt_table_body .pink_wrapper table tbody tr a.button:hover.disabled,
   body.wpt_table_body .pink_wrapper table tbody tr a.button:hover.alt.disabled {
-    background-color:  var(--pink-primary) !important;
-    border: 1px solid  var(--pink-primary);
+    background-color:  #fda8bf !important;
+    border: 1px solid  #fda8bf;
     color:#fff !important;
     text-decoration: none;
   
@@ -231,7 +232,7 @@ base class beautiful_pink_wrapper
     -webkit-appearance: none;
     background-color: #fff;
     border: 1px solid #ddd;
-    color: #666;
+    color: #666; 
     outline: none;
   }
   

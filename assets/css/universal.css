@@ -660,7 +660,7 @@ div.wpt_column_sort table#wpt_table.wpt_product_table tr>th.this_column_sorted {
 }
 div.wpt_column_sort table#wpt_table.wpt_product_table tr>th {
     /* background-image: url(../images/arrow.png);   */
-    background-image: url(../images/sort_arrow.png);  
+    background-image: url(../images/sort_arrow.png); 
     background-repeat: no-repeat;
     background-repeat: no-repeat;
     /* background-position: 97% center; */
