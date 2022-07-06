@@ -894,19 +894,6 @@ if( ! function_exists( 'wpt_table_row_generator' ) ){
                     $available_variations = $variable->get_available_variations();
                     $variations_id = wp_list_pluck( $available_variations, 'variation_id' );
 
-                    // var_dump($id,$variations_id,$table_row_generator_array['args']);
-
-                    // var_dump($variations_id);
-                    $my_tot_args = $table_row_generator_array;
-                    $new_args = array(
-                        'post_type' => 'product_variation',
-                        'post_parent__in' => array($id),
-                    );
-                    $my_tot_args['args'] = $new_args;
-                    // ob_start();
-                    // var_dump(wpt_table_row_generator($my_tot_args));
-// echo do_shortcode("[Product_Table id='1221']");
-                    continue;
                     $data_product_variations = htmlspecialchars( wp_json_encode( $available_variations ) );
 
 
