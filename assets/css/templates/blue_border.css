@@ -96,7 +96,7 @@
     margin-top: 0;
     text-decoration: none;
     border:1px solid var(--blue-border-primary);
-  
+  white-space: nowrap;
   }
   /* advanced action button (fatima) */
   .wpt_table_body .blue_border_wrapper button.single_add_to_cart_button:hover,
@@ -269,6 +269,7 @@
     text-decoration: none;
     border: 1px solid var(--blue-border-primary);
     margin-top:0;  
+    white-space: nowrap;
   }
   .blue_border_wrapper .smart_light_table.custom_table tbody tr a.button:hover,
   .blue_border_wrapper .quick_view .caqv-open-modal,
@@ -464,8 +465,10 @@ body.wpt_table_body .blue_border_wrapper table tbody tr.wpt_row>td .product_desc
   background: transparent; 
   margin-right: 35px;  
 }
-
-
+/*  fatima  */
+body.wpt_table_body .blue_border_wrapper .custom_table thead .wpt_table_header_row th {
+  white-space: nowrap;
+}
   .blue_border_wrapper th.wpt_check label {
     margin-left: -5px;
   }

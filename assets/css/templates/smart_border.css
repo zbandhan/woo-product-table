@@ -102,6 +102,7 @@
   margin-top: 0;
   text-decoration: none;
   border: 1px solid var(--smart-border-primary);
+  white-space: nowrap;
 
 }
 
@@ -315,6 +316,7 @@ div.smart_border_wrapper.wpt_product_table_wrapper input[type=checkbox]:checked+
   text-decoration: none;
   border: 1px solid var(--smart-border-primary);
   margin-top: 0;
+  white-space: nowrap;
 }
 
 .smart_border_wrapper .smart_light_table.custom_table tbody tr a.button:hover,
@@ -426,7 +428,7 @@ div.smart_border_wrapper.wpt_product_table_wrapper input[type=checkbox]:checked+
 
 .smart_border_wrapper .all_check_header_footer input[type=checkbox]+label,
 .smart_border_wrapper button.add_to_cart_all_selected {
-  font-size: var(--smart-font-size);
+  font-size: 14px;
 }
 
 .smart_border_wrapper .all_check_header_footer.all_check_header>span:hover {
@@ -522,7 +524,9 @@ body.wpt_table_body .smart_border_wrapper table tbody tr.wpt_row>td .product_des
 .smart_border_wrapper th.wpt_check label {
   margin-left: -5px;
 }
-
+body.wpt_table_body .smart_border_wrapper .custom_table thead .wpt_table_header_row th {
+  white-space: nowrap;
+}
 /*=========Search Box==========*/
 .smart_border_wrapper .search_single .query_box_direct_value,
 .smart_border_wrapper .instance_search_input {
@@ -621,7 +625,7 @@ body.wpt_table_body .smart_border_wrapper table tbody tr.wpt_row>td .product_des
   text-align: right;
 }
 
-.smart_border_wrapper tbody tr a.button,
+/* .smart_border_wrapper tbody tr a.button,
 .smart_border_wrapper tbody tr a.button.adding,
 .smart_border_wrapper tbody tr a.button.alt.wc-variation-selection-needed,
 .smart_border_wrapper tbody tr a.button.adding.wc-variation-selection-needed,
@@ -630,4 +634,23 @@ body.wpt_table_body .smart_border_wrapper table tbody tr.wpt_row>td .product_des
   background: var(--smart-border-primary);
   border: 1px solid var(--smart-light-border);
   color: #fff;
+} */
+.smart_border_wrapper tbody tr a.button,
+.smart_border_wrapper tbody tr a.button.adding,
+.smart_border_wrapper tbody tr a.button.alt.wc-variation-selection-needed,
+.smart_border_wrapper tbody tr a.button.adding.wc-variation-selection-needed,
+.smart_border_wrapper tbody tr a.button.disabled,
+.smart_border_wrapper tbody tr a.button.alt.disabled {
+  padding: 8px 22px;
+  background: var(--smart-border-primary);
+  color: #fff !important;
+  font-size: 14px;
+  border-radius: 0px;
+  font-weight: 400;
+  text-transform: uppercase;
+  margin-top: 0;
+  text-decoration: none;
+  border: 1px solid var(--smart-border-primary);
+  white-space: nowrap;
+
 }
