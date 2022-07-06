@@ -5,7 +5,8 @@ $templates_default = array(
     'beautiful_blacky'  =>  __( 'Beautiful Blacky', 'wpt_pro' ),
     'classic'           =>  __( 'Classic', 'wpt_pro' ),    
     'blue_border'       =>  __( 'Blue Border', 'wpt_pro' ),
-    'smart_border'       =>  __( 'smart border', 'wpt_pro' ), 
+    'smart_border'      =>  __( 'Smart Border', 'wpt_pro' ), 
+    'pink'              =>  __( 'Pink Style', 'wpt_pro' ),  
     
 );
 $pro_templates = array(

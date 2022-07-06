@@ -50,7 +50,7 @@ base class smart_classic_wrapper
 
 .classic_wrapper table.classic_table tbody tr td .wpt_product_title_in_td:hover {
   color: #111111;
-  background: transparent
+  background: transparent;
 }
 
 /* advanced action button  */
@@ -69,8 +69,8 @@ base class smart_classic_wrapper
   font-weight: 500;
   border-radius: 3px;
   font-size: 16px; 
-  border: 1px solid #0a7f9c;
-  background: #0a7f9c;
+  border: 1px solid var(--classic-primary);
+  background: var(--classic-primary); 
 
 }
 
