@@ -7,6 +7,9 @@ $templates_default = array(
     'blue_border'       =>  __( 'Blue Border', 'wpt_pro' ),
     'smart_border'      =>  __( 'Smart Border', 'wpt_pro' ), 
     'pink'              =>  __( 'Pink Style', 'wpt_pro' ),  
+    'modern'            =>  __( 'Modern Style', 'wpt_pro' ),  
+    'orange'            =>  __( 'Orange Style', 'wpt_pro' ),   
+    
     
 );
 $pro_templates = array(
