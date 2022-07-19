@@ -9,7 +9,7 @@
  * 
  * Version: 3.2.0
  * Requires at least:    4.0.0
- * Tested up to:         6.0
+ * Tested up to:         6.0.1
  * WC requires at least: 3.0.0
  * WC tested up to: 	 6.6.1
  * 
