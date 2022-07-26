@@ -180,6 +180,7 @@ function wpt_array_filter_recursive($array) {
 if( ! function_exists( 'wpt_shortcode_configuration_metabox_save_meta' ) ){
 
     function wpt_shortcode_configuration_metabox_save_meta( $post_id, $post ) { // save the data
+        ini_set('max_input_vars', 5000);
         
         /*
         * We need to verify this came from our screen and with proper authorization,
