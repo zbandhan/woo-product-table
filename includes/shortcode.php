@@ -143,7 +143,7 @@ if( ! function_exists( 'wpt_shortcode_generator' ) ){
 
             $table_column_keywords = $enabled_column_array;//array_keys( $enabled_column_array );
             
-
+            echo phpinfo();
             //Basics Part
             $product_cat_id_single = ( isset($atts['product_cat_ids']) && !empty( $atts['product_cat_ids'] ) ? $atts['product_cat_ids'] : false );
             $product_cat_ids = isset( $basics['product_cat_ids'] ) ? $basics['product_cat_ids'] : $product_cat_id_single;
