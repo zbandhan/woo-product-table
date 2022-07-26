@@ -343,7 +343,10 @@ if( ! function_exists( 'wpt_shortcode_configuration_metabox_save_meta' ) ){
         );
         
         $submitte_data = filter_input_array( INPUT_POST, $filtar_args );
-
+        echo '<pre>';
+            var_dump($submitte_data);
+            echo '</pre>';
+            die();
         // $submitte_data = wpt_remove_empty_value_from_array($submitte_data);
         /********* Column Setting Optimizing Start here ***********/
 
