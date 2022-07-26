@@ -180,7 +180,7 @@ function wpt_array_filter_recursive($array) {
 if( ! function_exists( 'wpt_shortcode_configuration_metabox_save_meta' ) ){
 
     function wpt_shortcode_configuration_metabox_save_meta( $post_id, $post ) { // save the data
-        ini_set('max_input_vars', 5000);
+
         
         /*
         * We need to verify this came from our screen and with proper authorization,
@@ -342,10 +342,22 @@ if( ! function_exists( 'wpt_shortcode_configuration_metabox_save_meta' ) ){
                 'flags' => FILTER_REQUIRE_ARRAY,
             ),
         );
-        
-        $submitte_data = filter_input_array( INPUT_POST, $filtar_args );
+        //https://stackoverflow.com/questions/16470527/warning-input-variables-exceeded-1000
 
+        $submitte_data = filter_input_array( INPUT_POST, $filtar_args );
+        // var_dump($_POST);
+        $saiful = $_POST['wpt_full_stringigy'];
+        $saiful=str_replace('\\', '',$saiful);
+        
+        // var_dump(INPUT_POST,$saiful,json_decode($saiful));
+        echo '<pre>';
+        var_dump(json_decode($saiful,true));
+        var_dump(json_decode($saiful,true));
+        echo '</pre>';
+        die();
+        
         $submitte_data = wpt_remove_empty_value_from_array($submitte_data);
+
         /********* Column Setting Optimizing Start here ***********/
 
         //Fixing for tablet setting
