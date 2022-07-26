@@ -592,26 +592,28 @@
         // alert(111);
         $(document).on('click','body.wpt_admin_body input#publish[name=publish]',function(e){
             
-            e.preventDefault();
-            var myForm = $('form#post');
-            // alert(113555544);
-            var data = myForm.serializeArray();//$('div#wpt_shortcode_configuration_metabox_id')
-            var myArr = {};
-            $.each(data,function(i,field){
-                myArr[field.name] = field.value;
-            });
-            var stringData = JSON.stringify(myArr);
-            myForm.prepend("<input type='hidden' name='wpt_full_stringigy' value='" + stringData + "'>");
-            // data.unshift({stringFyData: stringData});
-            $('form#post').submit();
-            console.log(myArr);
-            console.log(stringData);
+            // e.preventDefault();
+            // var myForm = $('form#post');
+            // // alert(113555544);
+            // var dataMata = $('div#wpt_shortcode_configuration_metabox_id input').fieldSerialize();
+            // var data = myForm.serializeArray();//$('div#wpt_shortcode_configuration_metabox_id')
+            // var myArr = {};
+            // $.each(data,function(i,field){
+            //     myArr[field.name] = field.value;
+            // });
+            // var stringData = JSON.stringify(myArr);
+            // myForm.prepend("<input type='hidden' name='wpt_full_stringigy' value='" + stringData + "'>");
+            // // data.unshift({stringFyData: stringData});
+            // // $('form#post').submit();
+            // console.log(dataMata);
+            // console.log(myArr);
+            // console.log(stringData);
 
-            // var postURL = 'post.php';
-            // $.post(postURL, data, function(response){}).done(function(){
+            // // var postURL = 'post.php';
+            // // $.post(postURL, data, function(response){}).done(function(){
                 
-            // })
-            return;
+            // // })
+            // return;
             //Detect and set Responsive Stats
             detect_responsive_stats();
             
