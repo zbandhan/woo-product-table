@@ -1,5 +1,5 @@
 <?php
-phpinfo();
+
 global $shortCodeText;
 add_shortcode( $shortCodeText, 'wpt_shortcode_generator' );
 
