@@ -590,22 +590,24 @@
         //     return;
         // });
         // alert(111);
-        $(document).on('click','body.wpt_admin_body input#publish',function(e){
+        $(document).on('click','body.wpt_admin_body input#publish[name=publish]',function(e){
             
-            // e.preventDefault();
-            // var myForm = $('form#post');
+            e.preventDefault();
+            var myForm = $('form#post');
             // // alert(113555544);
             // var dataMata = $('div#wpt_shortcode_configuration_metabox_id input').fieldSerialize();
-            // var data = myForm.serializeArray();//$('div#wpt_shortcode_configuration_metabox_id')
+            var data = myForm.serializeArray();//$('div#wpt_shortcode_configuration_metabox_id')
             var myArr = {};
+            var numb=0;
             $.each(data,function(i,field){
                 myArr[field.name] = field.value;
+                numb++;
             });
             var stringData = JSON.stringify(myArr);
             myForm.prepend("<input type='hidden' name='wpt_full_stringigy' value='" + stringData + "'>");
             // // data.unshift({stringFyData: stringData});
-            $('form#post').submit();
-            // console.log(dataMata);
+            // $('form#post').submit();
+            console.log(numb);
             // console.log(myArr);
             // console.log(stringData);
 
@@ -613,7 +615,7 @@
             // // $.post(postURL, data, function(response){}).done(function(){
                 
             // // })
-            // return;
+            return;
             //Detect and set Responsive Stats
             detect_responsive_stats();
             
