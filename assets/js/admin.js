@@ -174,6 +174,14 @@ jQuery.fn.extend({
         });
         $( ".wpt_responsive_each_wraper" ).sortable({handle:this});
         
+        setTimeout(function(){
+            OptimizeColumnWithName();
+        },1000);
+        function OptimizeColumnWithName(){
+            $('.wpt_column_sortable .wpt_sortable_peritem').not('.enabled').find('input,select').renameAttr('name', 'backup-name' );
+            $('.wpt_column_sortable .wpt_sortable_peritem.enabled').find('input,select').renameAttr('backup-name', 'name' );
+    
+        }
         
         $(document).on('click','.colum_data_input',function(){
             var parents = $(this).parents('.wpt_shortable_data');
@@ -396,6 +404,7 @@ jQuery.fn.extend({
          * Column Section Managing
          */
         $('body.wpt_admin_body').on('click','.wpt_column_sortable li.wpt_sortable_peritem input.checkbox_handle_input',function(){
+            OptimizeColumnWithName();
             var keyword = $(this).data('column_keyword');
             var thisWPTSortAble = $(this).closest('.wpt_column_sortable');
             var targetLiSelector = thisWPTSortAble.find(' li.wpt_sortable_peritem.column_keyword_' + keyword);
@@ -463,6 +472,7 @@ jQuery.fn.extend({
         $('body.wpt_admin_body').on('click','#wpt_keyword_hide_mobile li.hide_on_mobile_permits input.checkbox_handle_input',function(){
             var keyword = $(this).data('column_keyword');
             var targetLiSelector = $('#wpt_keyword_hide_mobile li.hide_on_mobile_permits.column_keyword_' + keyword);
+            OptimizeColumnWithName();
             if ($(this).prop('checked')) {
                 $(this).addClass('enabled');
                 targetLiSelector.addClass('enabled');
