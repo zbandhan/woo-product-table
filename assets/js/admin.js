@@ -590,7 +590,7 @@
         //     return;
         // });
         // alert(111);
-        $(document).on('click','body.wpt_admin_body input#publish[name=publish]',function(e){
+        $(document).on('click','body.wpt_admin_body input#publish',function(e){ //[name=publish]
             
             e.preventDefault();
             var myForm = $('form#post');
