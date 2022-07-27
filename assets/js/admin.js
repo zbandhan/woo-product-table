@@ -1,3 +1,4 @@
+
 (function($) {
     'use strict';
     $(document).ready(function() {
@@ -9,6 +10,7 @@
 
             wptUpdateStyleData(this);
         });
+        
         
         //For select, used select2 addons of jquery
         //$('.wpt_wrap select,.wpt_shortcode_gen_panel select, select#wpt_product_ids,select#product_tag_ids').select2();
@@ -597,10 +599,11 @@
                     numb++;
                 });
                 var stringData = JSON.stringify(myArr);
-                myForm.prepend("<input type='hidden' name='wpt_full_stringigy' value='" + stringData + "'>");
+                // myForm.prepend("<input type='hidden' name='wpt_full_stringigy' value='" + stringData + "'>");
                 // // data.unshift({stringFyData: stringData});
-                $('form#post').submit();
+                // $('form#post').submit();
                 console.log(numb);
+                alert(numb);
                 // console.log(myArr);
                 // console.log(stringData);
     
