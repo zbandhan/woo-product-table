@@ -349,10 +349,7 @@ if( ! function_exists( 'wpt_shortcode_configuration_metabox_save_meta' ) ){
         $saiful=str_replace('\\', '',$saiful);
         
         // var_dump(INPUT_POST,$saiful,json_decode($saiful));
-        echo '<pre>';
-        var_dump(json_decode($saiful,true));
-        // var_dump(json_decode($saiful,true));
-        echo '</pre>';
+        echo $saiful;
         die();
         $submitte_data = wpt_remove_empty_value_from_array($submitte_data);
         /********* Column Setting Optimizing Start here ***********/

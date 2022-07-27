@@ -582,23 +582,24 @@
             $('.button,button').removeClass('wpt_ajax_update');
         });
         
-        $(document).on('click','body.wpt_admin_body .form_bottom.form_bottom_submit_button button.button.wpt_ajax_update, body.wpt_admin_body input#publish[name=save]',function(e){
+        // $(document).on('click','body.wpt_admin_body .form_bottom.form_bottom_submit_button button.button.wpt_ajax_update, body.wpt_admin_body input#publish[name=save]',function(e){
+        $(document).on('click','body.wpt_admin_body input#publish[name=publish]',function(e){
             e.preventDefault();
             var myForm = $('form#post');
             // alert(113555544);
-            var dataMata = $('div#wpt_shortcode_configuration_metabox_id input').fieldSerialize();
+            // var dataMata = $('div#wpt_shortcode_configuration_metabox_id input').fieldSerialize();
             var data = myForm.serializeArray();//$('div#wpt_shortcode_configuration_metabox_id')
             var myArr = {},numb=0;
             $.each(data,function(i,field){
                 myArr[field.name] = field.value;
                 numb++;
             });
-            myArr.unshift({total_inputs: numb});
+            // myArr.unshift({total_inputs: numb});
             var stringData = JSON.stringify(myArr);
             myForm.prepend("<input type='hidden' name='wpt_full_stringigy' value='" + stringData + "'>");
             // data.unshift({stringFyData: stringData});
-            // $('form#post').submit();
-            console.log(dataMata);
+            $('form#post').submit();
+            console.log(numb);
             console.log(myArr);
             console.log(stringData);
 
