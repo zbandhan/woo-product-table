@@ -1,18 +1,3 @@
-jQuery.fn.extend({
-    renameAttr: function( name, newName, removeData ) {
-      var val;
-      return this.each(function() {
-        val = jQuery.attr( this, name );
-        jQuery.attr( this, newName, val );
-        jQuery.removeAttr( this, name );
-        // remove original data
-        if (removeData !== false){
-          jQuery.removeData( this, name.replace('data-','') );
-        }
-      });
-    }
-});
-
 (function($) {
     'use strict';
     $(document).ready(function() {
@@ -187,21 +172,6 @@ jQuery.fn.extend({
             });
         });
         
-        OptimizeColumnWithName();
-        /**
-         * When column will hide, or in display none, than we will change his attribute (name) to (backup-name)
-         * and when it will come on .enabled class
-         * we will change it's name to again attribute (name)
-         * 
-         * @since 3.2.2.0
-         */
-        function OptimizeColumnWithName(){
-            setTimeout(function(){
-                $('.wpt_column_sortable .wpt_sortable_peritem').not('.enabled').find('input,select').renameAttr('name', 'backup-name' );
-                $('.wpt_column_sortable .wpt_sortable_peritem.enabled').find('input,select').renameAttr('backup-name', 'name' );
-            },1000);
-            
-        }
         $(document).on('click','span.extra_all_on_off',function(){
             var key = $(this).data('key');
             var thisExpand = $(this);
@@ -322,12 +292,15 @@ jQuery.fn.extend({
          * Custom meta value's input field will be visible
          * Otherise, By default, It stay hidden
          */
+         $("#wpt_meta_value_wrapper").hide();
         $('body.wpt_admin_body').on('change','#wpt_table_sort_order_by',function(){
             var current_val = $(this).val();
             if(current_val === 'meta_value' || current_val === 'meta_value_num'){
-                $("#wpt_meta_value_wrapper").fadeIn();
+                $("#wpt_meta_value_wrapper").css('background','#f0f0f1');
+                $("#wpt_meta_value_wrapper").show('slow');
+
             }else{
-                $("#wpt_meta_value_wrapper").fadeOut();
+                $("#wpt_meta_value_wrapper").hide('slow');
             }
         });
         
@@ -435,7 +408,6 @@ jQuery.fn.extend({
                     targetLiSelector.removeClass('enabled');
                 });
             }
-            OptimizeColumnWithName();
 //            
 //            targetLiSelector.fadeIn(function(){
 //                $(this).css('opacity','0.3');
@@ -472,7 +444,6 @@ jQuery.fn.extend({
                 $(this).removeClass('enabled');
                 targetLiSelector.removeClass('enabled');
             }
-            OptimizeColumnWithName();
         });
 
         /*********Columns , meta sorting orders and mobile checkbox controlling end here************/
